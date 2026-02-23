@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build
+.next/
+out/
+
+# Generated
+app/tokens.css
+public/searchIndex.json
+public/faqIndex.json
+public/api-specs/
+
+# System
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
