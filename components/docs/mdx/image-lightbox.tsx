@@ -6,12 +6,26 @@ import { X } from 'lucide-react'
 interface ImageLightboxProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src?: string
   alt?: string
+  title?: string
 }
 
-export function ImageLightbox({ src, alt, ...props }: ImageLightboxProps) {
+export function ImageLightbox({ src, alt, title, ...props }: ImageLightboxProps) {
   const [open, setOpen] = useState(false)
 
   if (!src) return null
+
+  // Parse width from title attribute: ![alt](src "50%") or ![alt](src "400px")
+  let customWidth: string | undefined
+  let displayTitle: string | undefined = title
+  if (title) {
+    const widthMatch = title.match(/^(?:width=)?(\d+(?:px|%))$/)
+    if (widthMatch) {
+      customWidth = widthMatch[1]
+      displayTitle = undefined // Don't show size as tooltip
+    }
+  }
+
+  const style: React.CSSProperties = customWidth ? { width: customWidth, maxWidth: customWidth } : {}
 
   return (
     <>
@@ -19,8 +33,10 @@ export function ImageLightbox({ src, alt, ...props }: ImageLightboxProps) {
       <img
         src={src}
         alt={alt || ''}
+        title={displayTitle}
         {...props}
-        className="cursor-zoom-in border border-[var(--border)] rounded-[5px] max-w-[60%] h-auto mt-4"
+        className="cursor-zoom-in border border-[var(--border)] rounded-[5px] h-auto mt-4"
+        style={style}
         onClick={() => setOpen(true)}
       />
 

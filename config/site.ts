@@ -1,17 +1,17 @@
 export const siteConfig = {
-  title: 'Test Docs v1.4.5',
-  tagline: 'Documentation powered by Trellis',
-  url: 'https://example.com',
+  title: 'TechWrit AI Docs',
+  tagline: 'Technical content, proofed.',
+  url: 'https://docs.techwrit.ai',
   baseUrl: '/',
   favicon: '/img/favicon.svg',
-  organizationName: '',
-  projectName: 'test-docs-v1-4-5',
+  organizationName: 'TechWrit AI',
+  projectName: 'techwrit-ai-docs',
   repoUrl: '',
   editBaseUrl: '/edit/main',
   logo: {
     navbar: '/img/favicon.svg',
     hero: null,
-    alt: 'Test Docs v1.4.5 Logo',
+    alt: 'TechWrit AI Logo',
     useBuiltIn: true,
   },
   lastUpdated: {

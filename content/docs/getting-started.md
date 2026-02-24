@@ -1,43 +1,64 @@
 ---
-title: Getting Started
+title: Getting Started With TechWrit AI
+description: Create an account, learn the workspace layout, and submit your first request.
+keywords: [getting started, workspace, onboarding, first request, framework]
 ---
 
-Welcome to your documentation site powered by **{vars.productName}**.
+TechWrit AI is an AI-powered documentation agent that reviews, rewrites, and generates technical content against your style rules, terminology standards, and product glossary.
 
-## Quick Start
+## Create an account
 
-Edit files in `content/docs/` to update your documentation. The site will automatically rebuild when you save changes during development.
+1. Go to [techwrit.ai](https://techwrit.ai) and select **Get started**.
+2. Sign up with your email or a social provider.
+3. You land in the workspace with the Free tier (10 requests/month, all 14 modes).
 
-## Features
+## The workspace
 
-- **MDX Support** — Write documentation in Markdown with JSX components
-- **Syntax Highlighting** — Code blocks with Shiki for beautiful highlighting
-- **Dark/Light Mode** — Theme toggle with system preference detection
-- **Search** — Built-in Cmd+K search powered by Fuse.js
-- **Design Tokens** — Centralized design token system
-- **Callouts** — Tip, note, info, caution, and danger admonitions
+The workspace has three areas:
 
-## Writing Content
+- **Sidebar** (left) — New Chat, History, Features, Docs, and your user menu.
+- **Context bar** — Dropdown selectors for Audience, Doc Type, Mode, Framework, and Templates.
+- **Content input** — A text area where you paste or enter your content.
 
-Create `.md` or `.mdx` files in the `content/docs/` directory. Each file needs frontmatter:
+![The workspace](/img/docs/workspace.png "width=75%")
 
-```yaml
----
-title: Page Title
-sidebar_position: 1
----
-```
+## Your first request
 
-## Callout Examples
+1. **Pick a mode.** The default is **Write** (generate new docs). Switch to **Rewrite**, **Review**, or any other mode using the Mode dropdown.
+2. **Set context (optional).** Choose an Audience (e.g., Developers) and a Doc Type (e.g., API reference) to tailor the output.
+3. **Enter your content.** Paste existing documentation or describe what you need. In **Code to Docs** mode, you can also select the **paperclip icon** to upload source code files directly. Or select a **Template** from the Templates dropdown to pre-fill the input with a structured prompt — just replace the placeholders with your details.
+4. **Submit.** Select the arrow button or press `Ctrl+Enter` (`Cmd+Enter` on Mac).
 
-:::tip
-This is a helpful tip for your readers.
-:::
+The AI response appears below the input with token usage displayed.
 
-:::note
-Important information to keep in mind.
-:::
+## Target a docs framework
 
-:::caution
-Be careful with this action.
-:::
+If your documentation site uses a docs-as-code framework, select it from the **Framework** dropdown in the context bar. The AI formats output using that framework's conventions — frontmatter, callouts, tabs, and components — so the output is ready to commit without a formatting pass.
+
+TechWrit AI currently supports **Trellis**, a free, open-source Next.js documentation framework with built-in search, design tokens, and MDX components.
+
+When no framework is selected, output uses standard Markdown.
+
+## What happens next
+
+Action buttons appear below the output:
+
+- **Feed to Review** — Pastes the output into the input, switches to Review mode, and submits automatically. Use this after a Rewrite to verify compliance, or after Write to get editorial feedback on generated content.
+- **Keywords** — Extract search keywords from the output.
+- **Gen Glossary** — Generate a glossary section from the output.
+
+Use the **Reset** button in the context bar to clear selections and start fresh.
+
+## Configure your standards
+
+Open **Settings** from the user menu in the sidebar. You can:
+
+- Toggle style rules on/off.
+- Add custom style rules.
+- Manage terminology substitutions (preferred vs. avoided terms).
+- Manage your product glossary (terms, definitions, synonyms).
+- Create custom prompt templates for recurring document types.
+- Set custom instructions that apply to every request.
+- Export/import your configuration as JSON.
+
+See [Settings](/settings/) for details.

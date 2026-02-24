@@ -31,16 +31,16 @@
   .dark {
     --background: var(--color-neutral-slate-900);
     --foreground: var(--color-neutral-slate-100);
-    --primary: var(--color-accent-teal-400);
+    --primary: var(--color-brand-primary-400);
     --primary-foreground: var(--color-neutral-slate-900);
-    --secondary: var(--color-brand-primary-400);
+    --secondary: var(--color-brand-primary-300);
     --secondary-foreground: var(--color-neutral-slate-900);
     --accent: var(--color-brand-primary-400);
     --accent-foreground: var(--color-neutral-slate-900);
     --muted: var(--color-neutral-slate-800);
     --muted-foreground: var(--color-neutral-slate-400);
     --border: rgba(241, 245, 249, 0.12);
-    --ring: var(--color-accent-teal-400);
+    --ring: var(--color-brand-primary-400);
     --destructive: var(--color-utility-red-100);
     --destructive-foreground: var(--color-neutral-white);
     --card: var(--color-neutral-slate-800);
@@ -165,7 +165,7 @@
   .prose img {
     border: 1px solid var(--border);
     border-radius: 5px;
-    max-width: 60%;
+    width: 100%;
     height: auto;
     margin-top: 1rem;
   }
@@ -174,6 +174,14 @@
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
+  }
+
+  .markdown img {
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
   }
 
   .prose th {

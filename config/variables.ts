@@ -8,8 +8,8 @@
  * through the MDXRemote `scope` prop at build time.
  */
 export const docVariables: Record<string, string> = {
-  productName: 'Trellis',
-  companyName: "Pixl'n Grid",
-  version: '1.0.0',
+  productName: 'TechWrit AI',
+  companyName: 'TechWrit AI',
+  version: '1.8.0',
   frameworkName: 'Next.js',
 }

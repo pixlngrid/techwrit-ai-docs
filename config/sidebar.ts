@@ -12,14 +12,55 @@ export const mainSidebar: SidebarItem[] = [
   },
   {
     type: 'category',
+    label: 'Using TechWrit AI',
+    collapsed: false,
+    items: [
+      { type: 'doc', id: 'modes', label: 'Modes' },
+      { type: 'doc', id: 'best-practices', label: 'Best Practices' },
+      { type: 'doc', id: 'readability', label: 'Readability' },
+      { type: 'doc', id: 'use-cases', label: 'Use Cases' },
+    ],
+  },
+  {
+    type: 'category',
+    label: 'Configuration',
+    collapsed: false,
+    items: [
+      { type: 'doc', id: 'settings', label: 'Settings' },
+      { type: 'doc', id: 'configuration-reference', label: 'Configuration Reference' },
+    ],
+  },
+  {
+    type: 'category',
+    label: 'Integrations',
+    collapsed: false,
+    items: [
+      { type: 'doc', id: 'api/api-reference', label: 'API Reference' },
+      { type: 'doc', id: 'api/api-keys', label: 'API Keys' },
+      { type: 'doc', id: 'vscode-extension', label: 'VS Code Extension' },
+    ],
+  },
+  {
+    type: 'category',
     label: 'Guides',
     collapsed: false,
     items: [
-      {
-        type: 'doc',
-        id: 'guides/writing-docs',
-        label: 'Writing Documentation',
-      },
+      { type: 'doc', id: 'guides/writing-docs', label: 'Writing Docs' },
     ],
+  },
+  {
+    type: 'doc',
+    id: 'pricing',
+    label: 'Pricing',
+  },
+  {
+    type: 'doc',
+    id: 'whats-coming',
+    label: "What's Coming",
+  },
+  {
+    type: 'doc',
+    id: 'about',
+    label: 'About',
   },
 ]
