@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: siteConfig.tagline,
   icons: { icon: { url: siteConfig.favicon, type: 'image/svg+xml' } },
   openGraph: {
-    description: `${siteConfig.title} — an opinionated docs framework by Pixl'n Grid.`,
+    description: `${siteConfig.title} — ${siteConfig.tagline}`,
   },
 }
 
@@ -22,6 +22,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         <ThemeProvider
           attribute="class"

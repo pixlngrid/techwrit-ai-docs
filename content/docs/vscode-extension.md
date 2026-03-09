@@ -2,6 +2,9 @@
 title: VS Code Extension
 description: Review, rewrite, and simplify documentation against your style rules directly in VS Code.
 keywords: [VS Code, extension, review, rewrite, simplify, style check, diagnostics, quick fix]
+last_update:
+  date: 02/22/2026
+  author: Patricia McPhee
 ---
 
 Review, rewrite, and simplify technical documentation against your style rules, terminology, and glossary — directly in VS Code.

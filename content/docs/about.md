@@ -2,6 +2,9 @@
 title: About TechWrit AI
 description: Why TechWrit AI exists, the idea behind it, and who built it.
 keywords: [about, Patricia McPhee, technical writing, style guide, documentation]
+last_update:
+  date: 02/22/2026
+  author: Patricia McPhee
 ---
 
 ## Why this exists

@@ -2,6 +2,9 @@
 title: Getting Started With TechWrit AI
 description: Create an account, learn the workspace layout, and submit your first request.
 keywords: [getting started, workspace, onboarding, first request, framework]
+last_update:
+  date: 03/09/2026
+  author: Patricia McPhee
 ---
 
 TechWrit AI is an AI-powered documentation agent that reviews, rewrites, and generates technical content against your style rules, terminology standards, and product glossary.

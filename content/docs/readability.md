@@ -2,6 +2,9 @@
 title: Readability Metrics
 description: Real-time readability scores, before/after comparisons, and word-level diffs.
 keywords: [readability, flesch, grade level, gunning fog, diff, before after]
+last_update:
+  date: 02/22/2026
+  author: Patricia McPhee
 ---
 
 TechWrit AI calculates readability scores in real time as you type. In Rewrite and Simplify modes, before/after comparisons show the concrete impact of edits.

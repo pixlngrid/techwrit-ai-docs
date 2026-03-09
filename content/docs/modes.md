@@ -2,6 +2,9 @@
 title: Modes
 description: Fourteen purpose-built modes for every documentation task — from writing and reviewing to code-to-docs and translation.
 keywords: [modes, write, rewrite, review, style check, simplify, keywords, glossary, code to docs, user guide, explain, summarize, expand, translate, outline, cross-document consistency]
+last_update:
+  date: 03/09/2026
+  author: Patricia McPhee
 ---
 
 TechWrit AI has fourteen purpose-built modes. Each mode sends a different system prompt to the AI, producing output tailored to the task.

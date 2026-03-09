@@ -2,6 +2,9 @@
 title: Writing Docs
 description: Markdown syntax reference for authoring documentation pages, including images, callouts, tabs, code blocks, and diagrams.
 keywords: [markdown, images, callouts, tabs, code blocks, mermaid, authoring]
+last_update:
+  date: 03/09/2026
+  author: Patricia McPhee
 ---
 
 This page covers the markdown and MDX features available when writing documentation pages.

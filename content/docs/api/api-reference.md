@@ -2,6 +2,9 @@
 title: API Reference
 description: REST API endpoint, authentication, rate limits, request/response format, and code examples.
 keywords: [API, REST, endpoint, authentication, rate limits, cURL, Node.js, Python]
+last_update:
+  date: 02/22/2026
+  author: Patricia McPhee
 ---
 
 The TechWrit AI REST API lets you integrate documentation analysis into CI/CD pipelines, scripts, and custom tooling.

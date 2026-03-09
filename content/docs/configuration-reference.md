@@ -2,6 +2,9 @@
 title: Configuration Reference
 description: Full JSON schema for the techwrit-config.json export/import file.
 keywords: [configuration, JSON, schema, rules, terminology, glossary, templates, custom instructions, mode instructions, export, import]
+last_update:
+  date: 02/22/2026
+  author: Patricia McPhee
 ---
 
 TechWrit AI exports and imports configuration as a single JSON file (`techwrit-config.json`). This page documents every field so you can hand-edit a config, build one from scratch, or generate one programmatically.

@@ -7,7 +7,7 @@ export const siteConfig = {
   organizationName: 'TechWrit AI',
   projectName: 'techwrit-ai-docs',
   repoUrl: '',
-  editBaseUrl: '/edit/main',
+  editBaseUrl: '',
   logo: {
     navbar: '/img/favicon.svg',
     hero: null,

@@ -2,6 +2,9 @@
 title: API Keys
 description: Create and manage API keys for the TechWrit AI REST API.
 keywords: [API keys, authentication, REST API, revoke]
+last_update:
+  date: 02/22/2026
+  author: Patricia McPhee
 ---
 
 Pro and Team users can create API keys to access the TechWrit AI REST API. Open **API Keys** from the user menu to manage your keys.

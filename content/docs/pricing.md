@@ -2,6 +2,9 @@
 title: Pricing
 description: Free, Pro, and Team tiers — features, limits, and billing.
 keywords: [pricing, free, pro, team, subscription, billing, Stripe]
+last_update:
+  date: 02/22/2026
+  author: Patricia McPhee
 ---
 
 TechWrit AI has three tiers. Start free with no credit card required.

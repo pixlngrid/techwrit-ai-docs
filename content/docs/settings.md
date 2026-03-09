@@ -2,6 +2,9 @@
 title: Settings
 description: Configure style rules, terminology, glossary, templates, and custom instructions.
 keywords: [settings, style rules, terminology, glossary, templates, custom instructions, export, import, style guide, microsoft, google, apple]
+last_update:
+  date: 03/09/2026
+  author: Patricia McPhee
 ---
 
 Open Settings from the user menu (bottom of the sidebar). The dialog has five tabs.

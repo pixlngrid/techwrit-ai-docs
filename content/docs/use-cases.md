@@ -2,6 +2,9 @@
 title: Use Cases
 description: Practical scenarios showing how teams and individual writers use TechWrit AI in daily workflows.
 keywords: [use cases, style enforcement, CI/CD, API reference, OpenAPI, onboarding, migration, simplify, user guide, release notes, translate, keywords, glossary, framework, outline]
+last_update:
+  date: 03/09/2026
+  author: Patricia McPhee
 ---
 
 TechWrit AI handles a wide range of technical documentation tasks. Below are practical scenarios showing how teams and individual writers use it in their daily workflows.

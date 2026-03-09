@@ -2,6 +2,9 @@
 title: What's Coming
 description: Planned features and roadmap for upcoming TechWrit AI releases.
 keywords: [roadmap, planned features, batch processing, diagrams, cross-document consistency, browser extension, enterprise]
+last_update:
+  date: 03/09/2026
+  author: Patricia McPhee
 ---
 
 Planned features for upcoming releases. Priorities may shift based on user feedback.

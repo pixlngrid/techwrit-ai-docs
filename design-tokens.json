@@ -45,6 +45,96 @@
       "type": "color"
     }
   },
+  "navy": {
+    "navy-950": {
+      "value": "#0b1120",
+      "type": "color"
+    },
+    "navy-900": {
+      "value": "#0f172a",
+      "type": "color"
+    },
+    "navy-800": {
+      "value": "#1e293b",
+      "type": "color"
+    },
+    "navy-700": {
+      "value": "#334155",
+      "type": "color"
+    },
+    "navy-600": {
+      "value": "#475569",
+      "type": "color"
+    },
+    "navy-400": {
+      "value": "#94a3b8",
+      "type": "color"
+    },
+    "navy-300": {
+      "value": "#cbd5e1",
+      "type": "color"
+    },
+    "navy-200": {
+      "value": "#e2e8f0",
+      "type": "color"
+    },
+    "navy-100": {
+      "value": "#f1f5f9",
+      "type": "color"
+    },
+    "navy-50": {
+      "value": "#f8fafc",
+      "type": "color"
+    }
+  },
+  "blue": {
+    "blue-900": {
+      "value": "#1e3a8a",
+      "type": "color"
+    },
+    "blue-800": {
+      "value": "#1e40af",
+      "type": "color"
+    },
+    "blue-700": {
+      "value": "#1d4ed8",
+      "type": "color"
+    },
+    "blue-600": {
+      "value": "#2563eb",
+      "type": "color"
+    },
+    "blue-500": {
+      "value": "#3b82f6",
+      "type": "color"
+    },
+    "blue-400": {
+      "value": "#60a5fa",
+      "type": "color"
+    },
+    "blue-300": {
+      "value": "#93c5fd",
+      "type": "color"
+    }
+  },
+  "purple": {
+    "purple-600": {
+      "value": "#9333ea",
+      "type": "color"
+    },
+    "purple-500": {
+      "value": "#a855f7",
+      "type": "color"
+    },
+    "purple-400": {
+      "value": "#c084fc",
+      "type": "color"
+    },
+    "purple-300": {
+      "value": "#d8b4fe",
+      "type": "color"
+    }
+  },
   "brand": {
     "primary-50": {
       "value": "#f5f3ff",
@@ -133,6 +223,78 @@
     "teal-600": {
       "value": "#0d9488",
       "type": "color"
+    }
+  },
+  "semantic": {
+    "primary": {
+      "type": "color",
+      "description": "Primary interactive elements",
+      "light": {
+        "value": "hsl(221, 83%, 53%)"
+      },
+      "dark": {
+        "value": "hsl(213, 94%, 68%)"
+      }
+    },
+    "background": {
+      "type": "color",
+      "description": "Page background",
+      "light": {
+        "value": "hsl(210, 40%, 98%)"
+      },
+      "dark": {
+        "value": "hsl(222, 47%, 7%)"
+      }
+    },
+    "foreground": {
+      "type": "color",
+      "description": "Body text",
+      "light": {
+        "value": "hsl(215, 28%, 17%)"
+      },
+      "dark": {
+        "value": "hsl(214, 32%, 91%)"
+      }
+    },
+    "border": {
+      "type": "color",
+      "description": "Borders, dividers",
+      "light": {
+        "value": "hsl(214, 32%, 91%)"
+      },
+      "dark": {
+        "value": "hsl(221, 31%, 16%)"
+      }
+    },
+    "destructive": {
+      "type": "color",
+      "description": "Errors, destructive actions",
+      "light": {
+        "value": "hsl(0, 72%, 51%)"
+      },
+      "dark": {
+        "value": "hsl(0, 72%, 68%)"
+      }
+    },
+    "success": {
+      "type": "color",
+      "description": "Success states, confirmations",
+      "light": {
+        "value": "hsl(160, 84%, 39%)"
+      },
+      "dark": {
+        "value": "hsl(160, 68%, 52%)"
+      }
+    },
+    "warning": {
+      "type": "color",
+      "description": "Warnings, caution states",
+      "light": {
+        "value": "hsl(25, 95%, 53%)"
+      },
+      "dark": {
+        "value": "hsl(27, 96%, 61%)"
+      }
     }
   },
   "spacing": {

@@ -2,6 +2,9 @@
 title: GitHub Actions Integration
 description: Automatically lint documentation on every pull request using TechWrit AI and GitHub Actions.
 keywords: [GitHub Actions, CI/CD, pull request, docs lint, automation, style check, review]
+last_update:
+  date: 03/09/2026
+  author: Patricia McPhee
 ---
 
 Enforce documentation quality on every pull request. The workflow lints changed `.md` and `.mdx` files against your TechWrit AI style rules and posts a review comment directly on the PR.
