@@ -3,6 +3,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import remarkDirective from 'remark-directive'
 import rehypeSlug from 'rehype-slug'
+import { rehypeCodeMeta } from '@/lib/rehype-code-meta'
 import { getDocBySlug } from '@/lib/content'
 import { extractToc } from '@/lib/toc'
 import { mdxComponents } from '@/components/docs/mdx'
@@ -91,9 +92,11 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
 
           {doc.isFallback && <FallbackBanner locale={ctx.locale} />}
 
-          <h1 className="text-3xl font-bold tracking-tight mb-2">{doc.meta.title}</h1>
+          {!doc.meta.hide_title && (
+            <h1 className="text-3xl font-bold tracking-tight mb-2">{doc.meta.title}</h1>
+          )}
 
-          {(doc.meta.last_update || siteConfig.editBaseUrl) && (
+          {!doc.meta.hide_title && (doc.meta.last_update || siteConfig.editBaseUrl) && (
             <div className="flex items-center flex-wrap gap-x-4 text-sm text-[var(--muted-foreground)] mb-4">
               {doc.meta.last_update && (
                 <span>
@@ -103,7 +106,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
               )}
               {siteConfig.editBaseUrl && (
                 <a
-                  href={`${siteConfig.editBaseUrl}/${doc.filePath.replace(/\\/g, '/').replace(/^.*?content\//, 'content/')}`}
+                  href={`${siteConfig.editBaseUrl}/${doc.filePath}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-[var(--primary)] hover:underline no-underline shrink-0 ml-auto"
@@ -129,9 +132,10 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
               components={mdxComponents}
               options={{
                 scope: { vars: docVariables },
+                blockJS: false,
                 mdxOptions: {
                   remarkPlugins: [remarkGfm, remarkDirective, remarkCallout],
-                  rehypePlugins: [rehypeSlug],
+                  rehypePlugins: [rehypeSlug, rehypeCodeMeta],
                 },
               }}
             />

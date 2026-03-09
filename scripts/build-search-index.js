@@ -61,6 +61,34 @@ try {
   // No versions file
 }
 
+// Resolve @include directives in MDX content (sync, for build scripts).
+// Skips directives inside fenced code blocks.
+const CONTENT_ROOT = path.join(ROOT, 'content');
+const INCLUDE_RE = /^@include\s+(.+)$/gm;
+const FENCE_SPLIT = /(````[\s\S]*?````|```[\s\S]*?```)/g;
+function resolveIncludePath(includePath, dirPath) {
+  if (includePath.startsWith('/')) {
+    return path.join(CONTENT_ROOT, includePath);
+  }
+  return path.resolve(dirPath, includePath);
+}
+function resolveIncludes(content, dirPath, depth = 0) {
+  if (depth >= 5) return content;
+  const parts = content.split(FENCE_SPLIT);
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 !== 0) continue; // skip code blocks
+    parts[i] = parts[i].replace(INCLUDE_RE, (_match, rawPath) => {
+      const includePath = rawPath.trim();
+      const absPath = resolveIncludePath(includePath, dirPath);
+      if (!fs.existsSync(absPath)) return _match; // leave unresolved silently
+      const raw = fs.readFileSync(absPath, 'utf-8');
+      const { content: body } = matter(raw);
+      return resolveIncludes(body.trim(), path.dirname(absPath), depth + 1);
+    });
+  }
+  return parts.join('');
+}
+
 function getContentDir(locale, version) {
   const isDefault = locale === siteConfig.defaultLocale;
   const isCurrent = version === 'current';
@@ -151,11 +179,15 @@ function indexDir(dir, urlPrefix) {
   const entries = [];
 
   for (const file of files) {
-    const raw = fs.readFileSync(path.join(dir, file), 'utf-8');
-    const { data, content } = matter(raw);
+    const filePath = path.join(dir, file);
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    const { data, content: rawContent } = matter(raw);
 
     // Skip draft pages
     if (data.draft === true) continue;
+
+    // Resolve @include directives so partial content is indexed
+    const content = resolveIncludes(rawContent, path.dirname(filePath));
 
     const slug = file.replace(/\.mdx?$/, '').replace(/\/index$/, '');
     const url = `${urlPrefix}/${slug}/`;

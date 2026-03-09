@@ -1,23 +1,26 @@
 ---
 title: What's Coming
 description: Planned features and roadmap for upcoming TechWrit AI releases.
-keywords: [roadmap, planned features, batch processing, GitHub integration, browser extension, enterprise]
+keywords: [roadmap, planned features, batch processing, diagrams, cross-document consistency, browser extension, enterprise]
 ---
 
 Planned features for upcoming releases. Priorities may shift based on user feedback.
 
-## Phase 1 — Foundation
+## Phase 1 — Foundation (shipped in v1.10.0)
 
 ### Batch processing
 
-- Analyze multiple documents in one operation
-- CSV/JSON export of results for reporting
-- Unlocks multi-file features like doc coverage, cross-document consistency, and site scaffolding
+- ~~Analyze multiple documents in one operation~~ — Shipped
+- ~~CSV/JSON export of results for reporting~~ — Shipped
+- ~~Download individual results~~ — Shipped
 
-### Style rule templates
+### Style guide templates
 
-- Pre-built rule sets for common style guides (Microsoft, Google, Apple)
-- Community-contributed rule packs
+- ~~Pre-built rule sets for Microsoft, Google, and Apple style guides~~ — Shipped
+- ~~One-click Replace or Merge apply modes~~ — Shipped
+- ~~Auto-detection of active style guide~~ — Shipped
+
+See the [v1.10.0 release notes](/release-notes/v1-10-0/) for details.
 
 ## Phase 2 — Developer workflow
 
@@ -28,18 +31,11 @@ Planned features for upcoming releases. Priorities may shift based on user feedb
 - Applies your style rules and terminology to raw commit messages
 - Pairs with the Release Notes template for consistent formatting
 
-### GitHub PR integration
+### ~~Mermaid diagram suggestions~~ — Shipped in v1.11.0
 
-- Automatically review documentation changed in a pull request
-- Post style feedback as GitHub review comments with specific fixes
-- Configurable quality threshold — block merge if style score is below target
-- Builds on the existing REST API and VS Code extension
-
-### Mermaid diagram suggestions
-
-- When the AI identifies workflows, architecture, or data flows in code or documentation, it generates Mermaid diagram blocks alongside the output
-- Supports flowcharts, sequence diagrams, and entity-relationship diagrams
-- Diagrams render inline in the output panel and are included in downloads
+- ~~When the AI identifies workflows, architecture, or data flows in code or documentation, it generates Mermaid diagram blocks alongside the output~~ — Shipped
+- ~~Supports flowcharts, sequence diagrams, and entity-relationship diagrams~~ — Shipped (also supports state diagrams and class diagrams)
+- ~~Diagrams render inline in the output panel and are included in downloads~~ — Shipped
 
 ## Phase 3 — Team and quality
 
@@ -48,9 +44,12 @@ Planned features for upcoming releases. Priorities may shift based on user feedb
 - Upload a codebase and identify undocumented public APIs, exported functions, or components
 - The "gap finder" counterpart to Code to Docs
 
-### Cross-document consistency
+### ~~Cross-document consistency~~ — Shipped in v1.12.0
 
-- Analyze a set of documents together and flag inconsistent terminology, conflicting instructions, or duplicate content across pages
+- ~~Analyze a set of documents together and flag inconsistent terminology, conflicting instructions, or duplicate content across pages~~ — Shipped
+- ~~Harmonize terminology, tone, and structural patterns in Rewrite mode~~ — Shipped
+- ~~Cross-file style audit in Style Check mode~~ — Shipped
+- Automatically activates when multiple files are submitted together without batch mode
 
 ### Style score tracking
 

@@ -3,8 +3,14 @@ export type SidebarItem =
   | { type: 'category'; label: string; link?: string; collapsed?: boolean; items: SidebarItem[] }
   | { type: 'link'; label: string; href: string }
   | { type: 'api'; id: string; label?: string }
+| { type: 'html'; value: string }
 
 export const mainSidebar: SidebarItem[] = [
+    {
+    type: 'doc',
+    id: 'about',
+    label: 'Introduction',
+  },
   {
     type: 'doc',
     id: 'getting-started',
@@ -41,14 +47,6 @@ export const mainSidebar: SidebarItem[] = [
     ],
   },
   {
-    type: 'category',
-    label: 'Guides',
-    collapsed: false,
-    items: [
-      { type: 'doc', id: 'guides/writing-docs', label: 'Writing Docs' },
-    ],
-  },
-  {
     type: 'doc',
     id: 'pricing',
     label: 'Pricing',
@@ -57,10 +55,5 @@ export const mainSidebar: SidebarItem[] = [
     type: 'doc',
     id: 'whats-coming',
     label: "What's Coming",
-  },
-  {
-    type: 'doc',
-    id: 'about',
-    label: 'About',
   },
 ]

@@ -1,7 +1,7 @@
 ---
 title: Modes
 description: Fourteen purpose-built modes for every documentation task — from writing and reviewing to code-to-docs and translation.
-keywords: [modes, write, rewrite, review, style check, simplify, keywords, glossary, code to docs, user guide, explain, summarize, expand, translate, outline]
+keywords: [modes, write, rewrite, review, style check, simplify, keywords, glossary, code to docs, user guide, explain, summarize, expand, translate, outline, cross-document consistency]
 ---
 
 TechWrit AI has fourteen purpose-built modes. Each mode sends a different system prompt to the AI, producing output tailored to the task.
@@ -16,19 +16,25 @@ Generate new documentation from a description or outline. The AI produces produc
 
 Returns your content rewritten to comply with every active style rule. Preserves meaning and technical accuracy. Includes before/after readability scores.
 
-**Best for:** Bringing existing docs up to standard, enforcing consistency after edits.
+When you submit multiple files together (with batch mode off), Rewrite harmonizes terminology, voice, and structural patterns across all files so the output reads as a consistent set.
+
+**Best for:** Bringing existing docs up to standard, enforcing consistency after edits, harmonizing a doc set.
 
 ## Review
 
-Produces severity-ranked editorial feedback (Critical, Important, Minor). Quotes specific problematic text with explanations and corrections. Checks glossary term misuse and undefined jargon.
+Produces severity-ranked editorial feedback (Critical, Important, Minor). Quotes specific problematic text with explanations and corrections. Checks glossary term misuse, undefined jargon, document structure, and metadata quality.
 
-**Best for:** Pre-publish QA, peer review augmentation, onboarding new writers.
+When you submit multiple files together (with batch mode off), Review automatically performs a **cross-document consistency** analysis. It flags terminology drift, conflicting instructions, duplicate content, tone shifts, and structural inconsistencies across files. Cross-document issues appear in a dedicated section at the end of the review.
+
+**Best for:** Pre-publish QA, peer review augmentation, onboarding new writers, multi-file consistency audits.
 
 ## Style Check
 
 A structured audit where every active rule is checked individually. Each violation is quoted with a correction. Passing rules are marked with a checkmark. Produces a style score (percentage passed) and top 3 fixes.
 
-**Best for:** Compliance audits, measuring progress, team style adherence reports.
+When you submit multiple files together (with batch mode off), Style Check includes a cross-document consistency section that flags terminology drift, conflicting instructions, tone shifts, and structural inconsistencies across files.
+
+**Best for:** Compliance audits, measuring progress, team style adherence reports, cross-file consistency checks.
 
 ## Simplify
 

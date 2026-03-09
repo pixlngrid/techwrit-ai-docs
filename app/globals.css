@@ -24,23 +24,23 @@
     --popover: var(--color-neutral-white);
     --popover-foreground: var(--color-neutral-slate-900);
     --input: var(--color-neutral-slate-200);
-    --sidebar-width: 240px;
+    --sidebar-width: 280px;
     --navbar-height: 56px;
   }
 
   .dark {
     --background: var(--color-neutral-slate-900);
     --foreground: var(--color-neutral-slate-100);
-    --primary: var(--color-brand-primary-400);
+    --primary: var(--color-accent-teal-400);
     --primary-foreground: var(--color-neutral-slate-900);
-    --secondary: var(--color-brand-primary-300);
+    --secondary: var(--color-brand-primary-400);
     --secondary-foreground: var(--color-neutral-slate-900);
     --accent: var(--color-brand-primary-400);
     --accent-foreground: var(--color-neutral-slate-900);
     --muted: var(--color-neutral-slate-800);
     --muted-foreground: var(--color-neutral-slate-400);
     --border: rgba(241, 245, 249, 0.12);
-    --ring: var(--color-brand-primary-400);
+    --ring: var(--color-accent-teal-400);
     --destructive: var(--color-utility-red-100);
     --destructive-foreground: var(--color-neutral-white);
     --card: var(--color-neutral-slate-800);
@@ -104,6 +104,13 @@
     color: var(--color-neutral-slate-300);
   }
 
+  .prose :is(h1, h2, h3, h4, h5, h6) button {
+    color: var(--muted-foreground);
+  }
+  .prose :is(h1, h2, h3, h4, h5, h6) button:hover {
+    color: var(--primary);
+  }
+
   .prose h4 {
     font-size: 1.1rem;
     font-weight: 600;
@@ -120,12 +127,12 @@
     padding-left: 1.5em;
   }
 
-  .prose ul:not(.not-prose ul) {
+  .prose ul:not(.not-prose ul):not([role="tablist"]) {
     list-style-type: disc;
     padding-left: 1.5em;
   }
 
-  .prose li:not(.not-prose li) {
+  .prose li:not(.not-prose li):not([role="tab"]) {
     font-size: 16px;
     margin: 12px 0;
   }
@@ -162,10 +169,23 @@
     font-size: 90%;
   }
 
+  .prose :not(pre) > code {
+    background-color: var(--color-neutral-slate-100);
+    color: var(--color-neutral-slate-700);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  .dark .prose :not(pre) > code {
+    background-color: var(--color-neutral-slate-800);
+    color: var(--color-neutral-slate-200);
+  }
+
   .prose img {
     border: 1px solid var(--border);
     border-radius: 5px;
-    width: 100%;
+    max-width: 60%;
     height: auto;
     margin-top: 1rem;
   }
@@ -174,14 +194,6 @@
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
-  }
-
-  .markdown img {
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    width: 100%;
-    height: auto;
-    margin-top: 1rem;
   }
 
   .prose th {

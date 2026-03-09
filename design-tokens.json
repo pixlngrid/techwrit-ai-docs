@@ -47,43 +47,43 @@
   },
   "brand": {
     "primary-50": {
-      "value": "#eff6ff",
+      "value": "#f5f3ff",
       "type": "color"
     },
     "primary-100": {
-      "value": "#dbeafe",
+      "value": "#ede9fe",
       "type": "color"
     },
     "primary-200": {
-      "value": "#bfdbfe",
+      "value": "#ddd6fe",
       "type": "color"
     },
     "primary-300": {
-      "value": "#93c5fd",
+      "value": "#c4b5fd",
       "type": "color"
     },
     "primary-400": {
-      "value": "#60a5fa",
+      "value": "#a78bfa",
       "type": "color"
     },
     "primary-500": {
-      "value": "#3b82f6",
+      "value": "#8b5cf6",
       "type": "color"
     },
     "primary-600": {
-      "value": "#2563eb",
+      "value": "#7c3aed",
       "type": "color"
     },
     "primary-700": {
-      "value": "#1d4ed8",
+      "value": "#6d28d9",
       "type": "color"
     },
     "primary-800": {
-      "value": "#1e40af",
+      "value": "#5b21b6",
       "type": "color"
     },
     "primary-900": {
-      "value": "#1e3a8a",
+      "value": "#4c1d95",
       "type": "color"
     }
   },

@@ -147,7 +147,7 @@ curl -X POST https://techwrit.ai/api/v1/analyze \
 const response = await fetch("https://techwrit.ai/api/v1/analyze", {
   method: "POST",
   headers: {
-    "Authorization": "Bearer twai_your_key_here",
+    "X-Authorization": "Bearer twai_your_key_here",
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
@@ -169,7 +169,7 @@ import requests
 response = requests.post(
     "https://techwrit.ai/api/v1/analyze",
     headers={
-        "Authorization": "Bearer twai_your_key_here",
+        "X-Authorization": "Bearer twai_your_key_here",
         "Content-Type": "application/json",
     },
     json={

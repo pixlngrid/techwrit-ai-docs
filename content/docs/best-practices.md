@@ -108,6 +108,18 @@ Red strikethrough shows removed words. Green highlight shows additions. Scan the
 - **Multiple files:** Upload related files together. A React component plus its types file gives the AI more to work with than the component alone.
 - **Requirements alongside code:** For User Guide mode, paste Jira feature descriptions, product requirements, or acceptance criteria alongside your code. The AI uses the requirements to write accurate concept sections and procedures instead of guessing intent from code alone.
 
+## Check consistency across multiple files
+
+When you upload multiple files and submit with batch mode **off**, the AI analyzes all files together in a single request. In Review, Rewrite, and Style Check modes, this automatically activates cross-document consistency analysis:
+
+- **Review** flags terminology drift, conflicting instructions, duplicate content, tone shifts, and structural inconsistencies across files. Issues appear in a dedicated **Cross-document consistency** section.
+- **Rewrite** harmonizes terminology, voice, and structural patterns so all files read as a consistent set.
+- **Style Check** includes cross-file consistency findings after the per-rule checklist.
+
+To use this, attach your files and leave the "Process each file separately" toggle **off**. The label below the toggle confirms: "Analyze all N files together (1 request, includes cross-document consistency)."
+
+If you toggle batch mode **on**, each file is processed independently — useful when you want per-file results but don't need consistency checking.
+
 ## Handle [VERIFY] and [PLACEHOLDER] flags
 
 The AI uses these flags honestly:

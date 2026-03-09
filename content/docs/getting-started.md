@@ -24,7 +24,7 @@ The workspace has three areas:
 
 ## Your first request
 
-1. **Pick a mode.** The default is **Write** (generate new docs). Switch to **Rewrite**, **Review**, or any other mode using the Mode dropdown.
+1. **Pick a mode.** The default is **Review** (detailed feedback with severity-ranked suggestions). Switch to **Write**, **Rewrite**, or any other mode using the Mode dropdown.
 2. **Set context (optional).** Choose an Audience (e.g., Developers) and a Doc Type (e.g., API reference) to tailor the output.
 3. **Enter your content.** Paste existing documentation or describe what you need. In **Code to Docs** mode, you can also select the **paperclip icon** to upload source code files directly. Or select a **Template** from the Templates dropdown to pre-fill the input with a structured prompt — just replace the placeholders with your details.
 4. **Submit.** Select the arrow button or press `Ctrl+Enter` (`Cmd+Enter` on Mac).
@@ -35,7 +35,11 @@ The AI response appears below the input with token usage displayed.
 
 If your documentation site uses a docs-as-code framework, select it from the **Framework** dropdown in the context bar. The AI formats output using that framework's conventions — frontmatter, callouts, tabs, and components — so the output is ready to commit without a formatting pass.
 
-TechWrit AI currently supports **Trellis**, a free, open-source Next.js documentation framework with built-in search, design tokens, and MDX components.
+Three frameworks are supported:
+
+- **Trellis** — Next.js MDX with callouts, tabs, code highlighting, custom components, and search-indexed frontmatter.
+- **Docusaurus** — React-based MDX with admonitions, tabs, versioned docs, sidebar ordering, and tag/keyword frontmatter.
+- **Notion** — Markdown optimized for Notion's block system with callout blocks, toggles, to-do lists, and database property references.
 
 When no framework is selected, output uses standard Markdown.
 

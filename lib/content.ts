@@ -2,6 +2,10 @@ import fs from 'fs/promises'
 import path from 'path'
 import matter from 'gray-matter'
 import { siteConfig } from '@/config/site'
+import { authors as authorProfiles } from '@/config/authors'
+import type { AuthorProfile } from '@/config/authors'
+import { resolveIncludes } from './resolve-includes'
+import { preprocessAdmonitions } from './remark-callout'
 
 const DOCS_DIR = path.join(process.cwd(), 'content/docs')
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
@@ -31,6 +35,7 @@ export interface DocMeta {
   description?: string
   keywords?: string[]
   last_update?: { date: string; author: string }
+  hide_title?: boolean
   hide_table_of_contents?: boolean
   doc_type?: string
   role?: string[]
@@ -124,20 +129,26 @@ async function loadDoc(
   const raw = await fs.readFile(filePath, 'utf-8')
   const { data, content } = matter(raw)
 
+  // Resolve @include directives (inline partials before MDX compilation)
+  const resolvedContent = await resolveIncludes(content, path.dirname(filePath))
+  // Convert :::type title → :::type[title] for remark-directive compatibility
+  const processedContent = preprocessAdmonitions(resolvedContent)
+
   return {
     meta: {
       title: data.title || slug[slug.length - 1],
       description: data.description,
       keywords: data.keywords,
       last_update: data.last_update,
+      hide_title: data.hide_title === true,
       hide_table_of_contents: data.hide_table_of_contents,
       doc_type: data.doc_type,
       role: data.role,
       draft: data.draft === true,
       slug: '/' + slugPath,
     },
-    content,
-    filePath,
+    content: processedContent,
+    filePath: path.relative(process.cwd(), filePath).replace(/\\/g, '/'),
   }
 }
 
@@ -203,12 +214,54 @@ export async function getAllDocsMeta(
 
 // Blog content loading
 
+export interface BlogAuthor {
+  name: string
+  role?: string
+  bio?: string
+  img?: string
+  url?: string
+}
+
 export interface BlogMeta {
   title: string
   description?: string
   slug: string
   date: string
-  authors?: Array<{ name: string }>
+  authors?: BlogAuthor[]
+  category?: string
+  featured?: boolean
+  coverImage?: string
+  coverColor?: string
+}
+
+/**
+ * Resolve an author entry from frontmatter.
+ * - String → look up from config/authors.ts
+ * - Object → merge with config profile (inline overrides config)
+ */
+function resolveAuthor(entry: unknown): BlogAuthor | null {
+  if (typeof entry === 'string') {
+    const profile = authorProfiles[entry]
+    return profile ? { ...profile } : null
+  }
+  if (entry && typeof entry === 'object') {
+    const obj = entry as Record<string, unknown>
+    // If it has a name, check if there's a matching config profile to merge
+    const name = obj.name as string | undefined
+    if (!name) return null
+    // Find matching profile by key or by name
+    const profileKey = Object.keys(authorProfiles).find(
+      (k) => authorProfiles[k].name === name
+    )
+    const base: AuthorProfile = profileKey ? authorProfiles[profileKey] : { name }
+    return {
+      ...base,
+      ...Object.fromEntries(
+        Object.entries(obj).filter(([, v]) => v != null && v !== '')
+      ),
+    } as BlogAuthor
+  }
+  return null
 }
 
 export interface BlogEntry {
@@ -228,8 +281,13 @@ export async function getAllBlogPosts(): Promise<BlogEntry[]> {
   const posts: BlogEntry[] = []
 
   for (const file of files) {
-    const raw = await fs.readFile(path.join(BLOG_DIR, file), 'utf-8')
+    const filePath = path.join(BLOG_DIR, file)
+    const raw = await fs.readFile(filePath, 'utf-8')
     const { data, content } = matter(raw)
+
+    // Resolve @include directives
+    const resolvedContent = await resolveIncludes(content, path.dirname(filePath))
+    const processedContent = preprocessAdmonitions(resolvedContent)
 
     // Parse date from filename: YYYY-MM-DD-slug.md
     const match = file.match(/^(\d{4}-\d{2}-\d{2})-(.+)\.mdx?$/)
@@ -237,7 +295,7 @@ export async function getAllBlogPosts(): Promise<BlogEntry[]> {
     const fileSlug = match ? match[2] : file.replace(/\.mdx?$/, '')
 
     // Handle {/* truncate */} marker (MDX comment syntax)
-    const parts = content.split(/\{\/\*\s*truncate\s*\*\/\}/)
+    const parts = processedContent.split(/\{\/\*\s*truncate\s*\*\/\}/)
     const excerpt = parts[0].trim()
 
     posts.push({
@@ -246,9 +304,15 @@ export async function getAllBlogPosts(): Promise<BlogEntry[]> {
         description: data.description,
         slug: data.slug || fileSlug,
         date,
-        authors: data.authors,
+        authors: Array.isArray(data.authors)
+          ? data.authors.map(resolveAuthor).filter((a): a is BlogAuthor => a !== null)
+          : undefined,
+        category: data.category,
+        featured: data.featured === true,
+        coverImage: data.coverImage,
+        coverColor: data.coverColor,
       },
-      content,
+      content: processedContent,
       excerpt,
     })
   }
@@ -296,8 +360,13 @@ export async function getAllReleaseNotes(): Promise<ReleaseNoteEntry[]> {
   const notes: ReleaseNoteEntry[] = []
 
   for (const file of files) {
-    const raw = await fs.readFile(path.join(RELEASE_NOTES_DIR, file), 'utf-8')
+    const filePath = path.join(RELEASE_NOTES_DIR, file)
+    const raw = await fs.readFile(filePath, 'utf-8')
     const { data, content } = matter(raw)
+
+    // Resolve @include directives
+    const resolvedContent = await resolveIncludes(content, path.dirname(filePath))
+    const processedContent = preprocessAdmonitions(resolvedContent)
 
     const fileSlug = file.replace(/\.mdx?$/, '')
 
@@ -309,7 +378,7 @@ export async function getAllReleaseNotes(): Promise<ReleaseNoteEntry[]> {
         description: data.description,
         slug: fileSlug,
       },
-      content,
+      content: processedContent,
     })
   }
 

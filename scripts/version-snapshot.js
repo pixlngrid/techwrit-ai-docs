@@ -38,7 +38,7 @@ if (fs.existsSync(docsDest)) {
 }
 
 copyDirSync(docsSrc, docsDest)
-console.log(`  Copied docs -> versioned_docs/${version}/`)
+console.log(`  Copied content/docs/ -> versioned_docs/${version}/`)
 
 // 2. Copy sidebar config -> versioned_sidebars/<version>.ts
 const sidebarSrc = path.join(ROOT, 'config/sidebar.ts')

@@ -1,7 +1,7 @@
 ---
 title: Settings
 description: Configure style rules, terminology, glossary, templates, and custom instructions.
-keywords: [settings, style rules, terminology, glossary, templates, custom instructions, export, import]
+keywords: [settings, style rules, terminology, glossary, templates, custom instructions, export, import, style guide, microsoft, google, apple]
 ---
 
 Open Settings from the user menu (bottom of the sidebar). The dialog has five tabs.
@@ -38,7 +38,28 @@ TechWrit AI ships with 25 default style rules covering common technical writing 
 | Short paragraphs | Keep paragraphs between 50-150 words |
 | Short sentences | Keep sentences under 20 words |
 | Procedures as numbered lists | Convert sequential steps from prose to numbered lists |
+| No redundant headings above steps | Don't add a heading that repeats the numbered step below it |
 | Screenshots need text instructions | Always pair screenshots with written instructions |
+
+### Style guide templates
+
+The style guide selector at the top of the Style Rules tab lets you apply a pre-built rule set from a major style guide. Three templates are available:
+
+| Template | Key differences |
+|----------|----------------|
+| **Microsoft Writing Style Guide** | Direct tone, sentence case for H2+ subheadings, title case for H1. This is the default. |
+| **Google Developer Docs Style Guide** | Sentence case for all headings, no "easy" or "simple," 26-word sentence limit, "select" not "click" |
+| **Apple Style Guide** | Formal tone, no contractions, title case for all headings, Oxford comma, em dashes without spaces |
+
+To switch style guides:
+
+1. Select a style guide from the dropdown at the top of the Style Rules tab.
+2. Select **Apply**.
+3. In the confirmation dialog, choose how to apply it:
+   - **Replace** — Removes all built-in rules and replaces them with the selected style guide's rules. Custom rules are preserved.
+   - **Merge** — Keeps your current rules and adds any new rules from the selected style guide that you don't already have.
+
+The active style guide is auto-detected based on your current rule set. If your rules match a template exactly, the selector shows that template as active.
 
 **Toggle rules** on or off with the switch next to each rule. Only active rules are included in the AI prompt.
 
