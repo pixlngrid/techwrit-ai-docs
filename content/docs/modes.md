@@ -1,9 +1,9 @@
 ---
 title: Modes
 description: Fourteen purpose-built modes for every documentation task — from writing and reviewing to code-to-docs and translation.
-keywords: [modes, write, rewrite, review, style check, simplify, keywords, glossary, code to docs, user guide, explain, summarize, expand, translate, outline, cross-document consistency]
+keywords: [modes, write, rewrite, review, style check, simplify, keywords, glossary, code to docs, user guide, explain, summarize, expand, translate, outline, cross-document consistency, content merging, incorporate]
 last_update:
-  date: 03/09/2026
+  date: 03/11/2026
   author: Patricia McPhee
 ---
 
@@ -21,7 +21,38 @@ Returns your content rewritten to comply with every active style rule. Preserves
 
 When you submit multiple files together (with batch mode off), Rewrite harmonizes terminology, voice, and structural patterns across all files so the output reads as a consistent set.
 
-**Best for:** Bringing existing docs up to standard, enforcing consistency after edits, harmonizing a doc set.
+### Content merging
+
+Rewrite mode can merge new information into an existing document. Use section markers to separate the new material from the existing content:
+
+```text
+=== INCORPORATE THE FOLLOWING ===
+
+| Rule | Description |
+|---|---|
+| Active voice | Use active voice in all procedures |
+| Sentence length | Keep sentences under 20 words |
+
+### Terminology
+- Use "select" instead of "click"
+- Use "repository" instead of "repo"
+
+=== EXISTING CONTENT ===
+
+# General Style Guidelines
+
+Write clearly and concisely. Use present tense...
+```
+
+The AI weaves the new material into the existing document's structure — adding sections, extending tables, and integrating lists into the appropriate places. The output is the complete merged document, not just the new parts. All active style rules still apply to the merged output.
+
+You can use any similar marker pattern: `=== INCORPORATE ===` / `=== EXISTING CONTENT ===`, `=== NEW ===` / `=== CURRENT ===`, etc.
+
+:::tip
+Content merging is different from inline rules. With INCORPORATE markers, the new material becomes **visible content** in the document. Without markers, tables and rules in your input are treated as invisible instructions the AI applies silently during the rewrite.
+:::
+
+**Best for:** Bringing existing docs up to standard, enforcing consistency after edits, harmonizing a doc set, merging new guidelines into existing style documents.
 
 ## Review
 

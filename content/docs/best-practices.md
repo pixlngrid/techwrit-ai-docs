@@ -1,9 +1,9 @@
 ---
 title: Best Practices
 description: Tips for getting the most out of TechWrit AI across all 14 modes.
-keywords: [best practices, tips, workflow, chaining modes, prompt library, readability, diff]
+keywords: [best practices, tips, workflow, chaining modes, prompt library, readability, diff, content merging, incorporate]
 last_update:
-  date: 03/09/2026
+  date: 03/11/2026
   author: Patricia McPhee
 ---
 
@@ -122,6 +122,22 @@ When you upload multiple files and submit with batch mode **off**, the AI analyz
 To use this, attach your files and leave the "Process each file separately" toggle **off**. The label below the toggle confirms: "Analyze all N files together (1 request, includes cross-document consistency)."
 
 If you toggle batch mode **on**, each file is processed independently — useful when you want per-file results but don't need consistency checking.
+
+## Merge new information into existing documents
+
+Use Rewrite mode's content merging to incorporate new rules, terminology, or sections into an existing document without rewriting the input manually.
+
+1. Paste the new material (rules tables, terminology lists, new sections) after an `=== INCORPORATE THE FOLLOWING ===` marker.
+2. Paste the existing document after an `=== EXISTING CONTENT ===` marker.
+3. Submit in **Rewrite** mode.
+
+The AI merges the new material into the existing document's structure — adding new sections, extending existing tables, and integrating terms — while applying all active style rules to the merged output.
+
+This is useful when you need to update a style guide with new rules, add terminology to an existing glossary page, or fold new guidelines into a living document.
+
+:::caution
+Without the INCORPORATE markers, tables and rules in your input are treated as invisible instructions — the AI applies them silently during the rewrite but does not include them in the output. Use the markers when you want the new material to appear as visible content in the document.
+:::
 
 ## Handle [VERIFY] and [PLACEHOLDER] flags
 

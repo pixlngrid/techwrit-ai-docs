@@ -1,9 +1,9 @@
 ---
 title: Use Cases
 description: Practical scenarios showing how teams and individual writers use TechWrit AI in daily workflows.
-keywords: [use cases, style enforcement, CI/CD, API reference, OpenAPI, onboarding, migration, simplify, user guide, release notes, translate, keywords, glossary, framework, outline]
+keywords: [use cases, style enforcement, CI/CD, API reference, OpenAPI, onboarding, migration, simplify, user guide, release notes, translate, keywords, glossary, framework, outline, content merging]
 last_update:
-  date: 03/09/2026
+  date: 03/11/2026
   author: Patricia McPhee
 ---
 
@@ -69,6 +69,18 @@ You can also set things up manually: select **Code to Docs** mode, set audience 
 4. Search for `[VERIFY]` markers to find values the AI couldn't determine from the code alone.
 
 **Result:** A working OpenAPI spec generated in seconds that reflects your actual code. Use it as a starting point for API-first workflows, SDK generation, or gateway configuration.
+
+## Merge new guidelines into an existing style document
+
+**Problem:** Your team adopted new writing rules (sentence length limits, terminology changes, tone guidelines), and you need to fold them into an existing style guide without rewriting the whole document by hand.
+
+**Solution:**
+
+1. Set mode to **Rewrite**.
+2. Paste the new rules after an `=== INCORPORATE THE FOLLOWING ===` marker and the existing style guide after an `=== EXISTING CONTENT ===` marker.
+3. Submit. The AI weaves the new rules, terminology, and guidelines into the existing document's structure — adding sections, extending tables, and integrating lists.
+
+**Result:** A complete, updated style guide with the new material merged in and all active style rules applied. No manual cut-and-paste across sections.
 
 ## Onboard new technical writers
 
