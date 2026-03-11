@@ -43,12 +43,7 @@ export function Breadcrumbs({ slug, title }: BreadcrumbsProps) {
           {crumb.isLast ? (
             <span className="text-[var(--foreground)]">{crumb.label}</span>
           ) : (
-            <Link
-              href={crumb.href}
-              className="hover:text-[var(--foreground)] no-underline text-[var(--muted-foreground)]"
-            >
-              {crumb.label}
-            </Link>
+            <span>{crumb.label}</span>
           )}
         </span>
       ))}

@@ -23,7 +23,7 @@ Planned features for upcoming releases. Priorities may shift based on user feedb
 - ~~One-click Replace or Merge apply modes~~ — Shipped
 - ~~Auto-detection of active style guide~~ — Shipped
 
-See the [v1.10.0 release notes](/release-notes/v1-10-0/) for details.
+See the v1.10.0 release notes for details.
 
 ## Phase 2 — Developer workflow
 
