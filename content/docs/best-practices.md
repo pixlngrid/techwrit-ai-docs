@@ -1,7 +1,7 @@
 ---
 title: Best Practices
 description: Tips for getting the most out of TechWrit AI across all 14 modes.
-keywords: [best practices, tips, workflow, chaining modes, templates, readability, diff]
+keywords: [best practices, tips, workflow, chaining modes, prompt library, readability, diff]
 last_update:
   date: 03/09/2026
   author: Patricia McPhee
@@ -64,17 +64,17 @@ Before running your first real document through TechWrit AI, spend 5 minutes in 
 3. **Add product glossary terms.** Include definitions and synonyms. When you define "webhook" with a definition and synonyms like "callback URL," the AI uses the correct definition when writing and flags synonym misuse in reviews.
 4. **Set custom instructions** for rules that don't fit the other categories: "Always use Oxford commas," "Target a 9th-grade reading level," or "Use Markdown callout syntax for warnings."
 
-## Use templates for recurring documents
+## Use the Prompt Library for recurring documents
 
-If you write the same type of document regularly — feature requirements, release notes, API references — create a template instead of starting from scratch each time.
+If you write the same type of document regularly — feature requirements, release notes, API references — create a prompt instead of starting from scratch each time.
 
-1. Open **Settings > Templates** and select **Add template**.
+1. Open **Settings > Prompt Library** and select **Add prompt**.
 2. Write a structured prompt with `[placeholder]` fields for the parts that change each time.
-3. Optionally set the mode and doc type so they auto-apply when the template is selected.
+3. Optionally set the mode and doc type so they auto-apply when the prompt is selected.
 
-When you're ready to write, select the **Templates** dropdown in the context bar, choose your template, fill in the placeholders, and submit.
+When you're ready to write, select the **Prompt Library** dropdown in the context bar, choose your prompt, fill in the placeholders, and submit.
 
-TechWrit AI includes four built-in templates (Feature Requirements Doc, Release Notes, API Endpoint Doc, Troubleshooting Guide) to get you started.
+TechWrit AI includes four built-in prompts (Feature Requirements Doc, Release Notes, API Endpoint Doc, Troubleshooting Guide) to get you started.
 
 ## Use custom instructions strategically
 
@@ -136,7 +136,7 @@ Treat flagged sections as review checkpoints, not errors. They mean the AI is be
 
 If you work on a team, set up your standards once and export the configuration:
 
-1. Configure rules, terminology, glossary, templates, and custom instructions.
+1. Configure rules, terminology, glossary, prompts, and custom instructions.
 2. Open **Settings > General** and select **Export**. This downloads a `techwrit-config.json` file.
 3. Share the JSON file with your team. Each person imports it from their own Settings page.
 

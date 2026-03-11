@@ -20,7 +20,7 @@ TechWrit AI is an AI-powered documentation agent that reviews, rewrites, and gen
 The workspace has three areas:
 
 - **Sidebar** (left) — New Chat, History, Features, Docs, and your user menu.
-- **Context bar** — Dropdown selectors for Audience, Doc Type, Mode, Framework, and Templates.
+- **Context bar** — Dropdown selectors for Audience, Doc Type, Mode, Framework, and Prompt Library.
 - **Content input** — A text area where you paste or enter your content.
 
 ![The workspace](/img/docs/workspace.png "width=75%")
@@ -29,7 +29,7 @@ The workspace has three areas:
 
 1. **Pick a mode.** The default is **Review** (detailed feedback with severity-ranked suggestions). Switch to **Write**, **Rewrite**, or any other mode using the Mode dropdown.
 2. **Set context (optional).** Choose an Audience (e.g., Developers) and a Doc Type (e.g., API reference) to tailor the output.
-3. **Enter your content.** Paste existing documentation or describe what you need. In **Code to Docs** mode, you can also select the **paperclip icon** to upload source code files directly. Or select a **Template** from the Templates dropdown to pre-fill the input with a structured prompt — just replace the placeholders with your details.
+3. **Enter your content.** Paste existing documentation or describe what you need. In **Code to Docs** mode, you can also select the **paperclip icon** to upload source code files directly. Or select a prompt from the **Prompt Library** dropdown to pre-fill the input with a structured prompt — just replace the placeholders with your details.
 4. **Submit.** Select the arrow button or press `Ctrl+Enter` (`Cmd+Enter` on Mac).
 
 The AI response appears below the input with token usage displayed.
@@ -64,7 +64,7 @@ Open **Settings** from the user menu in the sidebar. You can:
 - Add custom style rules.
 - Manage terminology substitutions (preferred vs. avoided terms).
 - Manage your product glossary (terms, definitions, synonyms).
-- Create custom prompt templates for recurring document types.
+- Create custom prompts for recurring document types.
 - Set custom instructions that apply to every request.
 - Export/import your configuration as JSON.
 

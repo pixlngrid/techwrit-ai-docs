@@ -1,7 +1,7 @@
 ---
 title: Configuration Reference
 description: Full JSON schema for the techwrit-config.json export/import file.
-keywords: [configuration, JSON, schema, rules, terminology, glossary, templates, custom instructions, mode instructions, export, import]
+keywords: [configuration, JSON, schema, rules, terminology, glossary, prompt library, custom instructions, mode instructions, export, import]
 last_update:
   date: 02/22/2026
   author: Patricia McPhee
@@ -141,7 +141,7 @@ An array of glossary entry objects. These give the AI semantic understanding of 
   },
   {
     "term": "context bar",
-    "definition": "The horizontal bar above the input area containing Audience, Doc Type, Mode, and Templates selectors."
+    "definition": "The horizontal bar above the input area containing Audience, Doc Type, Mode, and Prompt Library selectors."
   }
 ]
 ```
@@ -188,7 +188,7 @@ This field is optional. If omitted or set to `{}`, the global `customInst` appli
 
 ## templates
 
-An array of prompt template objects. Templates pre-fill the input area with structured content containing placeholders.
+An array of Prompt Library entry objects. Prompts pre-fill the input area with structured content containing placeholders.
 
 ```json
 {
@@ -204,13 +204,13 @@ An array of prompt template objects. Templates pre-fill the input area with stru
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `id` | string | Yes | Unique identifier. Use a slug format (e.g., `"changelog-entry"`). |
-| `name` | string | Yes | Display name shown in the Templates dropdown. |
-| `content` | string | Yes | The template body. Use `[placeholder]` syntax for fields the user fills in. Include an `=== OUTPUT FORMAT ===` section to guide the AI's response structure. |
-| `mode` | string | No | Auto-set mode when the template is applied. See valid mode IDs below. |
-| `docType` | string | No | Auto-set doc type when the template is applied. See valid doc types below. |
-| `builtin` | boolean | Yes | Set to `false` for custom templates. Built-in templates (`true`) are managed by the app and cannot be overridden via import. |
+| `name` | string | Yes | Display name shown in the Prompt Library dropdown. |
+| `content` | string | Yes | The prompt body. Use `[placeholder]` syntax for fields the user fills in. Include an `=== OUTPUT FORMAT ===` section to guide the AI's response structure. |
+| `mode` | string | No | Auto-set mode when the prompt is applied. See valid mode IDs below. |
+| `docType` | string | No | Auto-set doc type when the prompt is applied. See valid doc types below. |
+| `builtin` | boolean | Yes | Set to `false` for custom prompts. Built-in prompts (`true`) are managed by the app and cannot be overridden via import. |
 
-### Template content tips
+### Prompt content tips
 
 - Use `[bracketed placeholders]` for fields the user fills in — e.g., `[product name]`, `[version number]`.
 - Add an `=== OUTPUT FORMAT ===` section at the end to instruct the AI on structure, headings, and format.
@@ -220,7 +220,7 @@ An array of prompt template objects. Templates pre-fill the input area with stru
 
 ## Valid mode IDs
 
-Use these values for the `mode` field in templates:
+Use these values for the `mode` field in Prompt Library entries:
 
 | ID | Label |
 |----|-------|
@@ -241,7 +241,7 @@ Use these values for the `mode` field in templates:
 
 ## Valid doc types
 
-Use these values for the `docType` field in templates:
+Use these values for the `docType` field in Prompt Library entries:
 
 `API reference`, `How-to guide`, `Conceptual overview`, `Tutorial`, `Release notes`, `Troubleshooting guide`, `README`, `Runbook`, `Migration guide`, `Architecture decision record`, `FAQ`
 

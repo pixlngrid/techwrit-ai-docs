@@ -24,7 +24,7 @@ const features = [
     title: 'Style Rules & Guides',
     icon: FileText,
     description:
-      '25 default rules with templates for Microsoft, Google, and Apple style guides. Add custom rules on Pro.',
+      '25 default rules with presets for Microsoft, Google, and Apple style guides. Add custom rules on Pro.',
     link: '/settings/',
   },
   {

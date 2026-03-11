@@ -32,7 +32,7 @@ See the [v1.10.0 release notes](/release-notes/v1-10-0/) for details.
 - Paste or upload a git log and generate structured release notes
 - Groups changes into user-facing categories (new features, improvements, fixes)
 - Applies your style rules and terminology to raw commit messages
-- Pairs with the Release Notes template for consistent formatting
+- Pairs with the Release Notes prompt for consistent formatting
 
 ### ~~Mermaid diagram suggestions~~ — Shipped in v1.11.0
 

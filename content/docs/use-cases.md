@@ -126,7 +126,7 @@ You can also set things up manually: select **Code to Docs** mode, set audience 
 
 **Solution:**
 
-1. Select the **Release Notes** template from the Templates dropdown.
+1. Select the **Release Notes** prompt from the Prompt Library dropdown.
 2. Fill in the product name, version, and raw changes (commit messages, JIRA descriptions, or bullet points).
 3. Submit in **Write** mode with Doc Type set to **Release notes**.
 4. The AI structures the output into user-facing categories (new features, improvements, fixes) using your style rules and terminology.

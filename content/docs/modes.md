@@ -123,16 +123,16 @@ Translates technical documentation to another language while preserving technica
 
 Generates a structured documentation outline from a topic description or notes. Produces a heading hierarchy with descriptive section names, content type suggestions per section (prose, table, code example, diagram placeholder, callout), and standard sections for the selected document type. The outline serves as a planning artifact you can fill in manually or expand with Write mode.
 
-**Best for:** Planning new documents, structuring content before writing, creating templates for recurring doc types.
+**Best for:** Planning new documents, structuring content before writing, creating outlines for recurring doc types.
 
 ---
 
-## Audience, Doc Type, and Templates
+## Audience, Doc Type, and Prompt Library
 
 All modes can be combined with:
 
 - **Audience** — Consumer-facing, Engineers, Developers, or DevOps. The AI adapts vocabulary, detail level, and examples.
 - **Doc Type** — API reference, How-to guide, Tutorial, Release notes, FAQ, and 6 more. The AI adapts structure and formatting.
-- **Templates** — Pre-built structured prompts that fill the input area with placeholders. Some templates auto-set the mode and doc type. See [Settings](/settings/) for details.
+- **Prompt Library** — Pre-built structured prompts that fill the input area with placeholders. Some prompts auto-set the mode and doc type. See [Settings](/settings/) for details.
 
 Audience and Doc Type are optional. If unset, the AI uses general technical writing best practices.

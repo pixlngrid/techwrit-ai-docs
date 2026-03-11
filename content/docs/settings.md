@@ -1,7 +1,7 @@
 ---
 title: Settings
-description: Configure style rules, terminology, glossary, templates, and custom instructions.
-keywords: [settings, style rules, terminology, glossary, templates, custom instructions, export, import, style guide, microsoft, google, apple]
+description: Configure style rules, terminology, glossary, Prompt Library, and custom instructions.
+keywords: [settings, style rules, terminology, glossary, prompt library, custom instructions, export, import, style guide, microsoft, google, apple]
 last_update:
   date: 03/09/2026
   author: Patricia McPhee
@@ -104,45 +104,45 @@ The AI uses glossary definitions when writing, flags synonym misuse in reviews, 
 
 **Team glossary** — Team members see team-enforced glossary entries with a lock icon. These cannot be edited or deleted. Personal entries are added separately.
 
-## Templates
+## Prompt Library
 
-![Settings - Templates](/img/docs/settings-templates.png)
+![Settings - Prompt Library](/img/docs/settings-templates.png)
 
-Prompt templates are reusable structured prompts that pre-fill the input area with placeholders you fill in before submitting. They save time on recurring document types.
+The Prompt Library contains reusable structured prompts that pre-fill the input area with placeholders you fill in before submitting. They save time on recurring document types.
 
-### Built-in templates
+### Built-in prompts
 
-TechWrit AI ships with four built-in templates:
+TechWrit AI ships with four built-in prompts:
 
-| Template | Auto-sets | Description |
+| Prompt | Auto-sets | Description |
 | -------- | --------- | ----------- |
 | Feature Requirements Doc | Mode: Write | Structured inputs for feature name, purpose, target users, problem statement, and business goal |
 | Release Notes | Mode: Write, Type: Release notes | Inputs for product name, version, and changes — outputs categorized release notes |
 | API Endpoint Doc | Mode: Write, Type: API reference | Inputs for endpoint, purpose, parameters, and response — outputs full API reference |
 | Troubleshooting Guide | Mode: Write, Type: Troubleshooting guide | Inputs for product, issue description, error messages, and steps — outputs structured troubleshooting content |
 
-Built-in templates cannot be edited or deleted. They display in both the Templates dropdown on the context bar and in the Templates tab in Settings.
+Built-in prompts cannot be edited or deleted. They display in both the Prompt Library dropdown on the context bar and in the Prompt Library tab in Settings.
 
-### Using a template
+### Using a prompt
 
-1. Select the **Templates** dropdown in the context bar (next to Audience, Type, and Mode).
-2. Select a template from the list.
-3. The input area fills with the template content. Mode and doc type are auto-set if the template specifies them.
+1. Select the **Prompt Library** dropdown in the context bar (next to Audience, Type, and Mode).
+2. Select a prompt from the list.
+3. The input area fills with the prompt content. Mode and doc type are auto-set if the prompt specifies them.
 4. Replace the `[placeholder]` text with your actual content.
 5. Select **Go** to submit.
 
-Templates are a one-shot action — selecting a template replaces the current input text.
+Prompts are a one-shot action — selecting a prompt replaces the current input text.
 
-### Custom templates
+### Custom prompts
 
-Create your own templates in the **Templates** tab in Settings:
+Create your own prompts in the **Prompt Library** tab in Settings:
 
-1. Select **Add template**.
-2. Enter a name and the template content (use `[placeholder]` syntax for fields the user fills in).
+1. Select **Add prompt**.
+2. Enter a name and the prompt content (use `[placeholder]` syntax for fields the user fills in).
 3. Optionally set an auto-set mode and doc type.
 4. Select **Add**.
 
-Custom templates appear alongside built-in templates in the Templates dropdown. You can edit or delete custom templates at any time.
+Custom prompts appear alongside built-in prompts in the Prompt Library dropdown. You can edit or delete custom prompts at any time.
 
 ## General
 
@@ -163,9 +163,9 @@ Use the **mode selector dropdown** to switch between editing the global instruct
 
 ### Export / Import
 
-- **Export** — Downloads a `techwrit-config.json` file containing your rules, terminology, glossary, custom instructions (global and per-mode), and custom templates.
+- **Export** — Downloads a `techwrit-config.json` file containing your rules, terminology, glossary, custom instructions (global and per-mode), and custom prompts.
 - **Import** — Loads a previously exported JSON file, replacing your current configuration.
 
-Use export/import to share configurations across teams or back up your standards. Imported files from older versions without newer fields (like per-mode instructions or templates) work — the missing fields are left unchanged.
+Use export/import to share configurations across teams or back up your standards. Imported files from older versions without newer fields (like per-mode instructions or prompts) work — the missing fields are left unchanged.
 
 See [Configuration Reference](/configuration-reference/) for the full JSON schema, valid field values, and examples you can use to hand-edit or generate config files.
