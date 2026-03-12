@@ -92,7 +92,7 @@ Identifies all technical terms, acronyms, and product concepts in your content. 
 
 Generates API and developer documentation directly from source code. The AI analyzes the public API surface — functions, classes, components, endpoints, CLI commands — and produces structured documentation with overviews, usage examples, parameter tables, return values, and error handling guidance.
 
-You can paste code into the input area or use the **file upload** button (paperclip icon) to upload one or more code files. When multiple files are uploaded, each is labeled with a filename header. The AI focuses on what a developer needs to integrate with or consume the code. Anything unclear or undocumented is flagged as `[VERIFY]`.
+You can paste code into the input area or use the **file upload** button (paperclip icon) to upload one or more files — source code, Markdown, plain text, or Word documents (`.docx`). When multiple files are uploaded, each is labeled with a filename header. The AI focuses on what a developer needs to integrate with or consume the code. Anything unclear or undocumented is flagged as `[VERIFY]`.
 
 ### Output format
 
@@ -128,7 +128,7 @@ You can paste code or use the **file upload** button to attach code files. Anyth
 
 ## Explain
 
-Produces a plain-language explanation of code or documentation. The AI summarizes what the content does and why, walks through key sections step by step, explains design decisions and trade-offs, and highlights important edge cases. You can paste code, upload files, or provide documentation.
+Produces a plain-language explanation of code or documentation. The AI summarizes what the content does and why, walks through key sections step by step, explains design decisions and trade-offs, and highlights important edge cases. You can paste code, upload files (including `.docx`), or provide documentation.
 
 **Best for:** Onboarding to unfamiliar code, understanding complex configurations, getting a narrative walkthrough of a module or document.
 

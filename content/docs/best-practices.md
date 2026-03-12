@@ -108,7 +108,7 @@ Red strikethrough shows removed words. Green highlight shows additions. Scan the
 **Code to Docs** and **User Guide** modes produce better output when you provide context alongside the code:
 
 - **Text + code together:** Paste a brief description of what the code does in the text area, then attach the code files. The description fills gaps the AI might otherwise flag as `[VERIFY]`.
-- **Multiple files:** Upload related files together. A React component plus its types file gives the AI more to work with than the component alone.
+- **Multiple files:** Upload related files together. A React component plus its types file gives the AI more to work with than the component alone. You can mix file types — code files, Markdown, and Word documents (`.docx`) in the same upload.
 - **Requirements alongside code:** For User Guide mode, paste Jira feature descriptions, product requirements, or acceptance criteria alongside your code. The AI uses the requirements to write accurate concept sections and procedures instead of guessing intent from code alone.
 
 ## Check consistency across multiple files

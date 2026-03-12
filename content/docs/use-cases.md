@@ -107,6 +107,19 @@ You can also set things up manually: select **Code to Docs** mode, set audience 
 
 **Result:** Systematic migration with measurable progress. The style score tells you exactly how compliant each document is.
 
+## Import and rewrite Confluence or Word content
+
+**Problem:** Your documentation lives in Confluence or Word, and you need to migrate it to a docs-as-code workflow — but the exported content is full of inconsistent formatting, outdated terminology, and style violations.
+
+**Solution:**
+
+1. Export your Confluence pages to Word (`.docx`), or use existing Word documents directly.
+2. Upload the `.docx` files using the paperclip icon. TechWrit AI converts them to Markdown automatically, preserving headings, lists, tables, and formatting.
+3. Use **Review** mode to get a prioritized list of issues, or **Rewrite** mode to apply your style rules in one pass.
+4. If you're targeting a docs framework, select it from the **Framework** dropdown — the rewritten output includes the correct frontmatter and components.
+
+**Result:** A clean, style-compliant Markdown version of your Confluence or Word content, ready for your docs-as-code pipeline. No manual copy-paste formatting cleanup.
+
 ## Simplify internal docs for external audiences
 
 **Problem:** Your internal engineering docs are technically accurate but too complex for external users. Rewriting them manually is slow and risks losing technical precision.

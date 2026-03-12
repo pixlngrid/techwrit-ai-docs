@@ -25,6 +25,17 @@ Planned features for upcoming releases. Priorities may shift based on user feedb
 
 See the v1.10.0 release notes for details.
 
+### Prompt library rename — Shipped in v1.12.0
+
+- ~~"Templates" renamed to "Prompt Library" across the app~~ — Shipped
+- ~~Individual items called "prompts" instead of "templates"~~ — Shipped
+
+### Word document upload — Shipped in v1.12.0
+
+- ~~Upload `.docx` files directly for review, rewrite, or any mode~~ — Shipped
+- ~~Converts to Markdown on upload, preserving headings, lists, tables, and formatting~~ — Shipped
+- ~~Import content from Confluence, Google Docs, or Microsoft Word~~ — Shipped
+
 ## Phase 2 — Developer workflow
 
 ### Changelog from git commits
@@ -34,7 +45,7 @@ See the v1.10.0 release notes for details.
 - Applies your style rules and terminology to raw commit messages
 - Pairs with the Release Notes prompt for consistent formatting
 
-### ~~Mermaid diagram suggestions~~ — Shipped in v1.11.0
+### Mermaid diagram suggestions — Shipped in v1.11.0
 
 - ~~When the AI identifies workflows, architecture, or data flows in code or documentation, it generates Mermaid diagram blocks alongside the output~~ — Shipped
 - ~~Supports flowcharts, sequence diagrams, and entity-relationship diagrams~~ — Shipped (also supports state diagrams and class diagrams)
@@ -47,7 +58,7 @@ See the v1.10.0 release notes for details.
 - Upload a codebase and identify undocumented public APIs, exported functions, or components
 - The "gap finder" counterpart to Code to Docs
 
-### ~~Cross-document consistency~~ — Shipped in v1.12.0
+### Cross-document consistency — Shipped in v1.12.0
 
 - ~~Analyze a set of documents together and flag inconsistent terminology, conflicting instructions, or duplicate content across pages~~ — Shipped
 - ~~Harmonize terminology, tone, and structural patterns in Rewrite mode~~ — Shipped

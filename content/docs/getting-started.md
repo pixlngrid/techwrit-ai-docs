@@ -29,7 +29,7 @@ The workspace has three areas:
 
 1. **Pick a mode.** The default is **Review** (detailed feedback with severity-ranked suggestions). Switch to **Write**, **Rewrite**, or any other mode using the Mode dropdown.
 2. **Set context (optional).** Choose an Audience (e.g., Developers) and a Doc Type (e.g., API reference) to tailor the output.
-3. **Enter your content.** Paste existing documentation or describe what you need. In **Code to Docs** mode, you can also select the **paperclip icon** to upload source code files directly. Or select a prompt from the **Prompt Library** dropdown to pre-fill the input with a structured prompt — just replace the placeholders with your details.
+3. **Enter your content.** Paste existing documentation or describe what you need. You can also select the **paperclip icon** to upload files directly — source code, Markdown, plain text, or Word documents (`.docx`). Or select a prompt from the **Prompt Library** dropdown to pre-fill the input with a structured prompt — just replace the placeholders with your details.
 4. **Submit.** Select the arrow button or press `Ctrl+Enter` (`Cmd+Enter` on Mac).
 
 The AI response appears below the input with token usage displayed.
@@ -69,3 +69,18 @@ Open **Settings** from the user menu in the sidebar. You can:
 - Export/import your configuration as JSON.
 
 See [Settings](/settings/) for details.
+
+## Supported file types
+
+Use the paperclip icon to upload files. TechWrit AI accepts:
+
+| Category | Extensions |
+|---|---|
+| Documents | `.md`, `.txt`, `.docx` |
+| Code | `.js`, `.ts`, `.tsx`, `.jsx`, `.py`, `.go`, `.java`, `.cs`, `.rb`, `.rs`, `.c`, `.cpp`, `.h`, `.hpp`, `.swift`, `.kt`, `.php` |
+| Shell | `.sh`, `.bash` |
+| Data / Config | `.yaml`, `.yml`, `.json`, `.xml` |
+| Web | `.html`, `.css`, `.scss` |
+| Database | `.sql` |
+
+Word documents (`.docx`) are converted to Markdown on upload, preserving headings, lists, tables, and formatting. This makes it easy to import content from tools like Confluence, Google Docs, or Microsoft Word for review or rewrite.
