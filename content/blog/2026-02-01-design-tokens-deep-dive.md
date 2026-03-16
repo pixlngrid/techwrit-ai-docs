@@ -45,4 +45,4 @@ Each token becomes a CSS custom property — for example, `colors.primary` gener
 
 Edit `design-tokens.json` and run `npm run build-tokens` to regenerate the CSS. The dev server watches for changes automatically.
 
-See the [Customizing Design Tokens](/design-tokens/customizing/) guide for the full list of available tokens.
+Edit `design-tokens.json` to change any token value. See the FAQ for common customization questions.

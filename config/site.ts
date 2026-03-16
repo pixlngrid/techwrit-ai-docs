@@ -38,6 +38,18 @@ export const siteConfig = {
     basePermalink: '/faq',
   },
 
+  // Blog — set enabled: false to disable /blog routes and hide nav link
+  blog: {
+    enabled: false,
+    layout: 'modern' as 'modern' | 'minimal',
+  },
+
+  // Release notes — set enabled: false to disable /release-notes routes and hide nav link
+  releaseNotes: {
+    enabled: true,
+    layout: 'modern' as 'modern' | 'changelog',
+  },
+
   // OpenAPI / API documentation — set enabled: true and place specs in content/api/
   apiDocs: {
     enabled: false,

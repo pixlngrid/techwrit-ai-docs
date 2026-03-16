@@ -43,6 +43,4 @@ The `id` field matches the file path under `content/docs/` without the extension
 
 ## Next Steps
 
-- Read the [Content Authoring](/guides/content-authoring/) guide for frontmatter options
 - Explore [Writing Docs](/guides/writing-docs/) for code blocks, tabs, and admonitions
-- Customize your branding with [Design Tokens](/design-tokens/customizing/)
