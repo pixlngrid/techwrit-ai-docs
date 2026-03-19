@@ -158,6 +158,22 @@ Generates a structured documentation outline from a topic description or notes. 
 
 ---
 
+## Diagram generation
+
+When the AI detects architecture, workflows, data flows, or entity relationships in your content, an inline prompt asks if you want to include diagrams. Selecting **Include diagrams** enables Mermaid diagram generation for that session.
+
+Supported diagram types: flowcharts, sequence diagrams, entity-relationship diagrams, state diagrams, and class diagrams. The AI chooses the type that best represents the content.
+
+Diagrams render as interactive SVGs in the output panel. Each diagram includes:
+
+- **PNG ↓** — download a high-resolution PNG image for embedding in docs, Confluence, or Slack
+- **Excalidraw ↓** — download an editable `.excalidraw` file to customize in Excalidraw (web, desktop, or VS Code extension)
+- **Hide/Show** — collapse or expand the diagram
+
+Diagram generation works with: Write, Code to Docs, User Guide, Explain, Expand, Outline, and Rewrite.
+
+---
+
 ## Audience, Doc Type, and Prompt Library
 
 All modes can be combined with:

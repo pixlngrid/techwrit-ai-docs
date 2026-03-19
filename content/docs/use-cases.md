@@ -208,6 +208,20 @@ This works with any mode: **Write** for new pages, **Rewrite** to convert existi
 
 **Result:** Documentation that's ready to commit to your docs repo without a formatting pass. Writers focus on content; the framework conventions are handled automatically.
 
+## Generate architecture diagrams from code
+
+**Problem:** Your documentation needs diagrams showing how services interact, how data flows, or how state machines work. Drawing them manually in a tool like Draw.io or Lucidchart is slow and they go stale as the code changes.
+
+**Solution:**
+
+1. Upload your code or paste your documentation into **Code to Docs**, **Explain**, or **Write** mode.
+2. When the inline prompt appears (detecting architecture/workflow content), select **Include diagrams**.
+3. The AI analyzes the content and generates Mermaid diagram blocks inline — flowcharts for workflows, sequence diagrams for API interactions, ER diagrams for data models.
+4. Diagrams render as interactive SVGs in the output panel. Use **PNG ↓** to download a high-resolution image for embedding in docs, Confluence, or Slack. Use **Excalidraw ↓** to download an editable `.excalidraw` file you can customize in Excalidraw (web, desktop, or VS Code extension).
+5. Download the output and the Mermaid code blocks work directly in GitHub, Docusaurus, Trellis, and any Mermaid-compatible renderer.
+
+**Result:** Diagrams that match your actual code, generated alongside the documentation. Export as PNG for instant use or Excalidraw for further editing. When the code changes, regenerate the docs and the diagrams update with it.
+
 ## Plan document structure before writing
 
 **Problem:** Writers jump straight into drafting and end up with documents that need structural rework — missing sections, wrong heading hierarchy, or poor information flow.

@@ -1,15 +1,17 @@
 ---
 title: Pricing
-description: Free, Pro, and Team tiers — features, limits, and billing.
+description: Three tiers based on what you need — start free, scale to teams.
 keywords: [pricing, free, pro, team, subscription, billing, Stripe]
 last_update:
-  date: 02/22/2026
+  date: 03/19/2026
   author: Patricia McPhee
 ---
 
-TechWrit AI has three tiers. Start free with no credit card required.
+Start free. Upgrade when you need unlimited requests, API access, or shared team rules.
 
 ## Free — $0/forever
+
+**You want to try it before you commit.**
 
 - 10 requests per month
 - All 14 modes (Write, Rewrite, Review, Style Check, Simplify, Keywords, Glossary, Code to Docs, User Guide, Explain, Summarize, Expand, Translate, Outline)
@@ -18,12 +20,16 @@ TechWrit AI has three tiers. Start free with no credit card required.
 - 3 terminology substitutions
 - Session history (cleared on sign-out)
 
+No credit card required. [Get started](https://techwrit.ai)
+
 ## Pro — $19/month (or $15/month billed annually)
 
-For working technical writers.
+**You're writing docs regularly and want consistent quality on every page.**
+
+Everything in Free, plus:
 
 - Unlimited requests
-- Custom style rules (create your own)
+- Custom style rules (create your own beyond the 25 defaults)
 - Up to 50 glossary terms
 - Unlimited terminology substitutions
 - Import/export configuration
@@ -32,16 +38,31 @@ For working technical writers.
 - VS Code extension
 - Priority processing
 
+The API unlocks CI/CD integration — lint docs on every pull request with the [GitHub Action](/guides/github-action/).
+
 ## Team — $24/seat/month (or $19/seat/month billed annually)
 
-For teams standardizing on shared writing conventions.
+**Your team needs everyone writing against the same standards, automatically.**
 
-- Everything in Pro (including REST API and VS Code extension)
+Everything in Pro, plus:
+
 - Unlimited glossary terms
 - Shared style rules, terminology, and glossary (locked for all members)
 - Team management with invite codes
 - Member roles (owner, admin, member)
 - Per-seat billing (minimum 2 seats)
+
+New writers get your team's standards the moment they join — no config files to share, no onboarding docs to read. The rules are just there.
+
+## Which tier is right for you?
+
+| Situation | Recommended tier |
+|---|---|
+| Evaluating the tool on a few documents | Free |
+| Writing docs weekly and want style scores | Pro |
+| Linting docs in CI/CD with the API or GitHub Action | Pro |
+| Multiple writers who need identical rule enforcement | Team |
+| Onboarding new writers to your style conventions | Team |
 
 ## Monthly reset
 

@@ -1,13 +1,13 @@
 ---
 title: Getting Started With TechWrit AI
-description: Create an account, learn the workspace layout, and submit your first request.
-keywords: [getting started, workspace, onboarding, first request, framework]
+description: Create an account, configure your standards, and submit your first request in under five minutes.
+keywords: [getting started, workspace, onboarding, first request, style rules, terminology, glossary]
 last_update:
-  date: 03/09/2026
+  date: 03/19/2026
   author: Patricia McPhee
 ---
 
-TechWrit AI is an AI-powered documentation agent that reviews, rewrites, and generates technical content against your style rules, terminology standards, and product glossary.
+Get from sign-up to your first style-checked document in under five minutes.
 
 ## Create an account
 
@@ -34,17 +34,20 @@ The workspace has three areas:
 
 The AI response appears below the input with token usage displayed.
 
-## Target a docs framework
+## Configure your standards
 
-If your documentation site uses a docs-as-code framework, select it from the **Framework** dropdown in the context bar. The AI formats output using that framework's conventions — frontmatter, callouts, tabs, and components — so the output is ready to commit without a formatting pass.
+This is where TechWrit AI stops being "just another AI tool." Open **Settings** from the user menu in the sidebar and spend five minutes setting up your rules:
 
-Three frameworks are supported:
+1. **Review the 25 default style rules.** These cover active voice, sentence length, heading case, jargon, and more. Turn off any that don't match your team's conventions.
+2. **Add terminology substitutions.** These are the word-choice rules your team enforces: "select" not "click," "repository" not "repo." The AI enforces these in every mode, every request.
+3. **Add product glossary terms.** Include definitions and synonyms. When you define "webhook" with a synonym "callback URL," the AI uses the correct definition when writing and flags misuse in reviews.
+4. **Set custom instructions** for rules that don't fit the other categories: "Always use Oxford commas," "Target a 9th-grade reading level."
 
-- **Trellis** — Next.js MDX with callouts, tabs, code highlighting, custom components, and search-indexed frontmatter.
-- **Docusaurus** — React-based MDX with admonitions, tabs, versioned docs, sidebar ordering, and tag/keyword frontmatter.
-- **Notion** — Markdown optimized for Notion's block system with callout blocks, toggles, to-do lists, and database property references.
+Once configured, every request — across all 14 modes — enforces your standards automatically. See [Settings](/settings/) for the full reference.
 
-When no framework is selected, output uses standard Markdown.
+:::tip
+On a team? Use the **Team** plan to lock shared rules, terminology, and glossary for all members. New writers get your standards from day one — no config file to share.
+:::
 
 ## What happens next
 
@@ -56,19 +59,17 @@ Action buttons appear below the output:
 
 Use the **Reset** button in the context bar to clear selections and start fresh.
 
-## Configure your standards
+## Target a docs framework
 
-Open **Settings** from the user menu in the sidebar. You can:
+If your documentation site uses a docs-as-code framework, select it from the **Framework** dropdown in the context bar. The AI formats output using that framework's conventions — frontmatter, callouts, tabs, and components — so the output is ready to commit without a formatting pass.
 
-- Toggle style rules on/off.
-- Add custom style rules.
-- Manage terminology substitutions (preferred vs. avoided terms).
-- Manage your product glossary (terms, definitions, synonyms).
-- Create custom prompts for recurring document types.
-- Set custom instructions that apply to every request.
-- Export/import your configuration as JSON.
+Three frameworks are supported:
 
-See [Settings](/settings/) for details.
+- **Trellis** — Next.js MDX with callouts, tabs, code highlighting, custom components, and search-indexed frontmatter.
+- **Docusaurus** — React-based MDX with admonitions, tabs, versioned docs, sidebar ordering, and tag/keyword frontmatter.
+- **Notion** — Markdown optimized for Notion's block system with callout blocks, toggles, to-do lists, and database property references.
+
+When no framework is selected, output uses standard Markdown.
 
 ## Supported file types
 
@@ -84,3 +85,10 @@ Use the paperclip icon to upload files. TechWrit AI accepts:
 | Database | `.sql` |
 
 Word documents (`.docx`) are converted to Markdown on upload, preserving headings, lists, tables, and formatting. This makes it easy to import content from tools like Confluence, Google Docs, or Microsoft Word for review or rewrite.
+
+## Next steps
+
+- [Modes](/modes/) — See what each of the 14 modes does and when to use it.
+- [Best Practices](/best-practices/) — Tips for chaining modes, using diffs, and getting better results.
+- [Use Cases](/use-cases/) — Real scenarios: CI/CD linting, team onboarding, API doc generation, and more.
+- [Pricing](/pricing/) — Free tier, Pro, and Team plans.
