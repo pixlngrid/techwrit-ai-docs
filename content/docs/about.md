@@ -51,7 +51,7 @@ Style score: 7/7 (100%). Grade level: 6 (was 11).
 
 ### Solo writers standardizing their own work
 
-Configure your style rules once. Run Review or Style Check before every publish. Get measurable quality scores instead of guessing. The free tier gives you 10 requests/month with all 14 modes.
+Configure your style rules once. Run Review or Style Check before every publish. Get measurable quality scores instead of guessing. The free tier gives you 20 requests/month with all 14 modes.
 
 ### Teams enforcing shared conventions
 

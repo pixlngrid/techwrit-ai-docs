@@ -13,7 +13,7 @@ Get from sign-up to your first style-checked document in under five minutes.
 
 1. Go to [techwrit.ai](https://techwrit.ai) and select **Get started**.
 2. Sign up with your email or a social provider.
-3. You land in the workspace with the Free tier (10 requests/month, all 14 modes).
+3. You land in the workspace with the Free tier (20 requests/month, all 14 modes).
 
 ## The workspace
 

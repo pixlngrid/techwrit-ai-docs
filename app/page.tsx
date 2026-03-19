@@ -270,7 +270,7 @@ export default function Home() {
               Start enforcing your style guide today
             </h2>
             <p className="text-[var(--muted-foreground)] mb-8">
-              Free tier includes all 14 modes, 25 style rules, and 10 requests/month.
+              Free tier includes all 14 modes, 25 style rules, and 20 requests/month.
               No credit card required.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
