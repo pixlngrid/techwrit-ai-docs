@@ -222,6 +222,32 @@ This works with any mode: **Write** for new pages, **Rewrite** to convert existi
 
 **Result:** Diagrams that match your actual code, generated alongside the documentation. Export as PNG for instant use or Excalidraw for further editing. When the code changes, regenerate the docs and the diagrams update with it.
 
+## Review UI text before shipping a feature
+
+**Problem:** Your team writes UI strings in code or design tools without a consistent review process. Error messages are vague, button labels are inconsistent, and tooltips vary in quality depending on who wrote them.
+
+**Solution:**
+
+1. Switch to the **UX Writing** category using the toggle above the context bar.
+2. Paste your UI strings into **UX Review** mode — error messages, button labels, tooltips, confirmation dialogs, empty states, and notifications.
+3. The AI evaluates each string for clarity, conciseness, actionability, tone, consistency, and accessibility, reporting only violations with concrete rewrites.
+4. Use **UX Rewrite** to automatically fix the flagged strings while maintaining consistent patterns.
+
+**Result:** Consistent, user-friendly microcopy that follows UX writing best practices, reviewed before it reaches users.
+
+## Generate microcopy for a new feature
+
+**Problem:** A designer hands you mockups with placeholder text like "Error" and "OK." You need production-ready strings for every state — errors, success, empty, loading — and they should be consistent with the rest of the product.
+
+**Solution:**
+
+1. Switch to **UX Writing** and select **UX Generate** mode.
+2. Describe the scenario: "User tries to delete a project that has active collaborators."
+3. The AI generates complete string sets — error title, body, primary CTA, secondary CTA, confirmation dialog, and success message — with 2-3 variants per key string.
+4. Configure your product terminology and glossary so the generated strings use your product vocabulary.
+
+**Result:** A complete set of production-ready UI strings, structured for easy copy into design tools or code, with variants to choose from.
+
 ## Plan document structure before writing
 
 **Problem:** Writers jump straight into drafting and end up with documents that need structural rework — missing sections, wrong heading hierarchy, or poor information flow.

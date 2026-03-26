@@ -152,7 +152,7 @@ Custom prompts appear alongside built-in prompts in the Prompt Library dropdown.
 
 Custom instructions are freeform guidance appended to your input before each API call. You can set a **global** instruction that applies to all modes, or set **per-mode** instructions that override the global default for specific modes.
 
-Use the **mode selector dropdown** to switch between editing the global instruction and any of the 14 mode-specific instructions. Modes that have custom instructions are marked with a dot indicator in the dropdown.
+Use the **mode selector dropdown** to switch between editing the global instruction and any of the 17 mode-specific instructions. Modes that have custom instructions are marked with a dot indicator in the dropdown.
 
 **Examples:**
 

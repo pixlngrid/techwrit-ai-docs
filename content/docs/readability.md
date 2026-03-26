@@ -28,7 +28,7 @@ Measures how easy text is to read. Higher is easier.
 
 Estimates the US school grade required to understand the text. A score of 8 means an 8th grader should be able to understand it.
 
-**Target for technical docs:** Grade 8-12 depending on audience.
+**Target for technical docs:** Grade 8-12 depending on audience. Use the **Level** dropdown in the context bar to set the target: General (Grade 6-8), Standard (Grade 8-10), or Advanced (Grade 10-12).
 
 ### Gunning Fog Index
 

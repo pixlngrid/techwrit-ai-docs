@@ -11,7 +11,7 @@ Style guides shouldn't just be documents — they should be enforceable systems.
 
 Every documentation team has style rules. They live in a PDF that nobody opens, in a senior writer's head, or in PR comments that say "this doesn't sound right" without explaining why. New writers don't know the rules. Reviewers catch different issues depending on who reviews. Quality depends on who's available, not on the standards themselves.
 
-TechWrit AI changes that. It codifies your style rules, terminology standards, and product glossary into configuration that the AI enforces automatically — across 14 purpose-built modes for every documentation task. The output follows your rules from the first draft, not the third revision.
+TechWrit AI changes that. It codifies your style rules, terminology standards, and product glossary into configuration that the AI enforces automatically — across 17 purpose-built modes for technical writing and UX writing. The output follows your rules from the first draft, not the third revision.
 
 ## What makes this different from ChatGPT or Claude?
 
@@ -51,7 +51,7 @@ Style score: 7/7 (100%). Grade level: 6 (was 11).
 
 ### Solo writers standardizing their own work
 
-Configure your style rules once. Run Review or Style Check before every publish. Get measurable quality scores instead of guessing. The free tier gives you 20 requests/month with all 14 modes.
+Configure your style rules once. Run Review or Style Check before every publish. Get measurable quality scores instead of guessing. The free tier gives you 20 requests/month with all 17 modes.
 
 ### Teams enforcing shared conventions
 

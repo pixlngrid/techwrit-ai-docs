@@ -13,7 +13,7 @@ Get from sign-up to your first style-checked document in under five minutes.
 
 1. Go to [techwrit.ai](https://techwrit.ai) and select **Get started**.
 2. Sign up with your email or a social provider.
-3. You land in the workspace with the Free tier (20 requests/month, all 14 modes).
+3. You land in the workspace with the Free tier (20 requests/month, all 17 modes).
 
 ## The workspace
 
@@ -43,7 +43,7 @@ This is where TechWrit AI stops being "just another AI tool." Open **Settings** 
 3. **Add product glossary terms.** Include definitions and synonyms. When you define "webhook" with a synonym "callback URL," the AI uses the correct definition when writing and flags misuse in reviews.
 4. **Set custom instructions** for rules that don't fit the other categories: "Always use Oxford commas," "Target a 9th-grade reading level."
 
-Once configured, every request — across all 14 modes — enforces your standards automatically. See [Settings](/settings/) for the full reference.
+Once configured, every request — across all 17 modes — enforces your standards automatically. See [Settings](/settings/) for the full reference.
 
 :::tip
 On a team? Use the **Team** plan to lock shared rules, terminology, and glossary for all members. New writers get your standards from day one — no config file to share.
@@ -88,7 +88,7 @@ Word documents (`.docx`) are converted to Markdown on upload, preserving heading
 
 ## Next steps
 
-- [Modes](/modes/) — See what each of the 14 modes does and when to use it.
+- [Modes](/modes/) — See what each of the 17 modes does and when to use it.
 - [Best Practices](/best-practices/) — Tips for chaining modes, using diffs, and getting better results.
 - [Use Cases](/use-cases/) — Real scenarios: CI/CD linting, team onboarding, API doc generation, and more.
 - [Pricing](/pricing/) — Free tier, Pro, and Team plans.

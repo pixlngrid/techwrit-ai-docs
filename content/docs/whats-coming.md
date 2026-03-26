@@ -36,6 +36,16 @@ See the v1.10.0 release notes for details.
 - ~~Converts to Markdown on upload, preserving headings, lists, tables, and formatting~~ — Shipped
 - ~~Import content from Confluence, Google Docs, or Microsoft Word~~ — Shipped
 
+### UX Writing modes — Shipped in v1.14.0
+
+- ~~UX Review, UX Rewrite, and UX Generate modes for UI microcopy~~ — Shipped
+- ~~Category toggle to switch between Technical Writing and UX Writing~~ — Shipped
+
+### Configurable reading level — Shipped in v1.14.0
+
+- ~~Reading Level dropdown: General (Grade 6-8), Standard (Grade 8-10), Advanced (Grade 10-12)~~ — Shipped
+- ~~Applies to all modes including Simplify, Rewrite, and generation modes~~ — Shipped
+
 ## Phase 2 — Developer workflow
 
 ### Changelog from git commits

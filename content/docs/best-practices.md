@@ -1,13 +1,13 @@
 ---
 title: Best Practices
-description: Tips for getting the most out of TechWrit AI across all 14 modes.
+description: Tips for getting the most out of TechWrit AI across all 17 modes.
 keywords: [best practices, tips, workflow, chaining modes, prompt library, readability, diff, content merging, incorporate]
 last_update:
   date: 03/11/2026
   author: Patricia McPhee
 ---
 
-Get the most out of TechWrit AI by following these tips. They apply across all 14 modes and cover everything from input formatting to multi-pass workflows.
+Get the most out of TechWrit AI by following these tips. They apply across all 17 modes and cover everything from input formatting to multi-pass workflows.
 
 ## Set context before you submit
 
