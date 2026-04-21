@@ -35,7 +35,10 @@ Every team has exactly one **owner**, plus any number of **admins** and **member
 
 See [Invite members to your team](/team/invite-members/) for the full walkthrough.
 
-In short: open **Team settings** → **Invite** tab → share the 8-character code → members redeem it via **Join a team** in their user menu.
+Two paths:
+
+- **Email invitation.** Team settings → Invite tab → enter email, pick role, **Send**. Recipient gets a one-use link that expires in 7 days.
+- **Shared code.** Team settings → Invite tab → share the 8-character code → recipients redeem it via **Join a team** in their user menu.
 
 ## Managing members
 
