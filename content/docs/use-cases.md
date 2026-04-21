@@ -3,7 +3,7 @@ title: Use Cases
 description: Practical scenarios showing how teams and individual writers use TechWrit AI in daily workflows.
 keywords: [use cases, style enforcement, CI/CD, API reference, OpenAPI, onboarding, migration, simplify, user guide, release notes, translate, keywords, glossary, framework, outline, content merging]
 last_update:
-  date: 03/11/2026
+  date: 04/21/2026
   author: Patricia McPhee
 ---
 
@@ -43,32 +43,41 @@ Add this to your CI pipeline (GitHub Actions, Azure DevOps, GitLab CI) to flag s
 
 **Result:** Documentation quality is enforced automatically, the same way linters enforce code quality.
 
+## Edit docs without leaving your editor
+
+**Problem:** You write docs in Markdown alongside code, but catching style issues means copying content into the web app, running a review, and pasting fixes back. The context switch breaks flow and slows down docs-as-code workflows.
+
+**Solution:**
+
+1. Install the [VS Code extension](/docs/vscode-extension) and set your API key.
+2. Open any Markdown file and run **TechWrit AI: Review Document** (`Ctrl+Shift+F6`). Issues appear as native VS Code diagnostics — squiggly underlines with severity ranks.
+3. Hover an issue to see the explanation, then select the lightbulb icon to apply the suggested fix as a quick-fix action.
+4. For larger changes, run **Rewrite Document** (`Ctrl+Shift+F8`) or **Simplify Document** (`Ctrl+Shift+F9`) to update the file in place — undo with `Ctrl+Z` if needed.
+5. Enable `techwrit.reviewOnSave` to run Review automatically every time you save a Markdown file.
+
+The extension uses the same style rules, terminology, and glossary from your account — no separate configuration.
+
+**Result:** Style review happens inside your editor, next to the code and commits. Writers stay in their docs-as-code workflow instead of round-tripping through a browser.
+
 ## Generate API reference from source code
 
-**Problem:** Your API has dozens of endpoints, but the documentation is outdated or incomplete. Developers write code faster than writers can document it.
+**Problem:** Your API has dozens of endpoints, but the documentation is outdated or incomplete — and depending on the audience, your team needs either human-readable reference docs or a machine-readable OpenAPI spec for tooling. Writing either by hand is tedious and falls behind the code.
 
 **Solution:**
 
 1. Upload your source code files (controllers, route handlers, type definitions) using the file upload button. TechWrit AI detects API patterns automatically and switches to **Code to Docs** mode.
-2. When the inline prompt appears, choose your output format — **Markdown** for structured documentation or **OpenAPI YAML** for a machine-readable spec. Processing starts as soon as you select a format.
-3. If you need to change the format later, use the **Format** selector in the context bar.
+2. When the inline prompt appears, choose your output format:
+   - **Markdown** for structured reference documentation that uses your style rules and glossary from the start.
+   - **OpenAPI YAML** for a valid OpenAPI 3.0 spec with paths, request/response schemas, parameter types, and descriptions inferred from your code.
 
-You can also set things up manually: select **Code to Docs** mode, set audience to **Developers**, choose your format, and paste or upload code.
+   Processing starts as soon as you select a format.
+3. To change the format later, use the **Format** selector in the context bar.
+4. For OpenAPI output, download the `.yaml` file and import it into your API tooling (Swagger UI, Redoc, Postman, or similar).
+5. Search for `[VERIFY]` markers to find values the AI couldn't determine from the code alone.
 
-**Result:** A complete first draft of API documentation — or a ready-to-use OpenAPI 3.0 spec — that uses your style rules and glossary from the start. Writers review and refine instead of writing from scratch.
+To set things up manually, select **Code to Docs** mode, set audience to **Developers**, choose your format, and paste or upload code.
 
-## Generate an OpenAPI spec from existing code
-
-**Problem:** Your team needs an OpenAPI specification for an existing API, but writing one by hand is tedious and error-prone. The code is the source of truth, and the spec needs to match it.
-
-**Solution:**
-
-1. Upload your route handlers or controller files. TechWrit AI detects the API endpoints and asks which format you want.
-2. Select **OpenAPI YAML**. The AI generates a valid OpenAPI 3.0 specification with paths, request/response schemas, parameter types, and descriptions — all inferred from your code.
-3. Download the `.yaml` file and import it into your API tooling (Swagger UI, Redoc, Postman, etc.).
-4. Search for `[VERIFY]` markers to find values the AI couldn't determine from the code alone.
-
-**Result:** A working OpenAPI spec generated in seconds that reflects your actual code. Use it as a starting point for API-first workflows, SDK generation, or gateway configuration.
+**Result:** A complete first draft of API documentation — or a ready-to-use OpenAPI 3.0 spec — generated in seconds and aligned with your actual code. Writers review and refine instead of writing from scratch; platform teams get a working spec for API-first workflows, SDK generation, or gateway configuration.
 
 ## Merge new guidelines into an existing style document
 
@@ -224,7 +233,7 @@ This works with any mode: **Write** for new pages, **Rewrite** to convert existi
 
 ## Review UI text before shipping a feature
 
-**Problem:** Your team writes UI strings in code or design tools without a consistent review process. Error messages are vague, button labels are inconsistent, and tooltips vary in quality depending on who wrote them.
+**Problem:** Engineers and developers write UI strings directly in code without input from a technical or UX writer. The result: vague error messages, ambiguous button labels, and tooltips that leave users at a dead end with no clear next step.
 
 **Solution:**
 
