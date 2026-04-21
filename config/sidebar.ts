@@ -43,6 +43,7 @@ export const mainSidebar: SidebarItem[] = [
     items: [
       { type: 'doc', id: 'api/api-reference', label: 'API Reference' },
       { type: 'doc', id: 'api/api-keys', label: 'API Keys' },
+      { type: 'doc', id: 'guides/github-action', label: 'GitHub Actions' },
       { type: 'doc', id: 'vscode-extension', label: 'VS Code Extension' },
     ],
   },
