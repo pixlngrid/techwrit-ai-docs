@@ -43,6 +43,8 @@ Everything in Free, plus:
 
 Includes a 14-day free trial. The API unlocks CI/CD integration — lint docs on every pull request with the [GitHub Action](/guides/github-action/).
 
+Already on Pro and want to move your team to TechWrit AI? You can upgrade to Team in place — same Stripe subscription, same billing date, prorated price difference. See [Upgrade from Pro to Team without re-subscribing](/use-cases/#upgrade-from-pro-to-team-without-re-subscribing).
+
 ## Team — $24/seat/month (or $19/seat/month billed annually)
 
 **Your team needs everyone writing against the same standards, automatically.**

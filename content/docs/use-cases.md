@@ -268,3 +268,16 @@ This works with any mode: **Write** for new pages, **Rewrite** to convert existi
 3. Use the outline as a writing plan. Fill it in manually or feed each section to **Write** mode.
 
 **Result:** Documents start with the right structure. Writing is faster because the plan is already in place.
+
+## Upgrade from Pro to Team without re-subscribing
+
+**Problem:** You're a Pro subscriber and your team wants in too. Canceling Pro, waiting for the billing period to end, and then subscribing to Team creates billing friction and risks a gap in access.
+
+**Solution:**
+
+1. Open the user menu and select **Upgrade**.
+2. The dialog detects your Pro subscription and shows an **Upgrade to Team** confirmation directly — no Stripe Checkout redirect, no second card entry.
+3. Pick your seat count (minimum 2), choose your billing cadence (monthly or annual), and confirm. Your existing subscription swaps from the Pro price to the Team price in place.
+4. Keep your current cadence or switch to annual to save 17% — the upgrade dialog lets you pick.
+
+**Result:** You keep your single Stripe subscription and invoice history. Stripe prorates the price difference automatically on your next invoice. A team is created with you as owner, and you can invite members immediately using the [invite-code flow](/team/invite-members/).

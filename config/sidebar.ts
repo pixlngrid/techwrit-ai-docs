@@ -48,6 +48,15 @@ export const mainSidebar: SidebarItem[] = [
     ],
   },
   {
+    type: 'category',
+    label: 'For teams',
+    collapsed: false,
+    items: [
+      { type: 'doc', id: 'team/invite-members', label: 'Invite members' },
+      { type: 'doc', id: 'team/administration', label: 'Team administration' },
+    ],
+  },
+  {
     type: 'doc',
     id: 'pricing',
     label: 'Pricing',
