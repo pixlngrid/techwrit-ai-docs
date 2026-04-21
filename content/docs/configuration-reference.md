@@ -238,6 +238,9 @@ Use these values for the `mode` field in Prompt Library entries:
 | `expand` | Expand |
 | `translate` | Translate |
 | `outline` | Outline |
+| `ux-review` | UX Review |
+| `ux-rewrite` | UX Rewrite |
+| `ux-generate` | UX Generate |
 
 ## Valid doc types
 

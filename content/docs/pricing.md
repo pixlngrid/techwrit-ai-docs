@@ -16,6 +16,7 @@ Start free. Upgrade when you need unlimited requests, API access, or shared team
 - 20 requests per month
 - All 17 modes (Write, Rewrite, Review, Style Check, Simplify, Keywords, Glossary, Code to Docs, User Guide, Explain, Summarize, Expand, Translate, Outline, UX Review, UX Rewrite, UX Generate)
 - 25 default style rules
+- Up to 15 custom style rules
 - 4 built-in prompts (Feature Requirements Doc, Release Notes, API Endpoint Doc, Troubleshooting Guide)
 - Up to 5 glossary terms
 - 3 terminology substitutions
