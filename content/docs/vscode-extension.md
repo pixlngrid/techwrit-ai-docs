@@ -1,13 +1,13 @@
 ---
 title: VS Code Extension
-description: Review, rewrite, and simplify documentation against your style rules directly in VS Code.
-keywords: [VS Code, extension, review, rewrite, simplify, style check, diagnostics, quick fix]
+description: Review, rewrite, and simplify documentation and UX copy against your style rules directly in VS Code.
+keywords: [VS Code, extension, review, rewrite, simplify, style check, diagnostics, quick fix, UX writing, microcopy, UI strings]
 last_update:
-  date: 02/22/2026
+  date: 04/22/2026
   author: Patricia McPhee
 ---
 
-Review, rewrite, and simplify technical documentation against your style rules, terminology, and glossary — directly in VS Code.
+Review, rewrite, and simplify technical documentation and UX copy against your style rules, terminology, and glossary — directly in VS Code.
 
 ## Requirements
 
@@ -34,7 +34,11 @@ Your API key is stored securely in VS Code's secret storage, not in settings.jso
 | TechWrit AI: Simplify Document | `Ctrl+Shift+F9` | Simplify for readability |
 | TechWrit AI: Review Selection | | Review selected text only |
 | TechWrit AI: Rewrite Selection | | Rewrite selected text in-place |
+| TechWrit AI: UX Review Selection | | Review selected UI copy for clarity, tone, and accessibility |
+| TechWrit AI: UX Rewrite Selection | | Rewrite selected UI copy to be concise and actionable |
 | TechWrit AI: Set API Key | | Configure your API key |
+
+Documentation commands (Review, Style Check, Rewrite, Simplify) apply to **Markdown** and **MDX** files. UX commands work on any file type — select UI strings in a `.tsx`, `.json`, `.yaml`, or any other file and run the command.
 
 ## How each mode works
 
@@ -57,6 +61,18 @@ Reduces reading complexity to Grade 8-10 level. Same in-place update behavior as
 ### Selection support
 
 Select text, then right-click and choose **Review Selection** or **Rewrite Selection** to analyze or rewrite just the highlighted section.
+
+### UX Review
+
+Reviews selected UI copy — error messages, button labels, tooltips, onboarding text, empty states, notifications, confirmation dialogs — for clarity, conciseness, actionability, tone, consistency, and accessibility. Results appear in the Output panel as narrative feedback on each string; no inline diagnostics (UX review output is per-string guidance, not line-by-line).
+
+Requires a selection. Works in any file type, so you can run it on hardcoded strings in `.tsx` / `.jsx`, locale files in `.json` / `.yaml`, or any other context where UI copy lives.
+
+### UX Rewrite
+
+Rewrites selected UI copy to be concise and actionable. Enforces common UI-copy constraints (button labels 1-3 words, tooltips under 150 characters, error titles under 8 words). Replaces the selection in place — use **Ctrl+Z** to undo.
+
+Requires a selection. Works in any file type.
 
 ## Settings
 
@@ -92,4 +108,8 @@ The status bar shows the current state of the extension:
 
 **No diagnostics appear after Review** — Check the Output panel (View > Output, select "TechWrit AI") for the full response. The document may already comply with your rules.
 
-**Extension not visible in status bar** — The extension only activates when a Markdown file is open.
+**Extension not visible in status bar** — The status bar indicator only shows when a Markdown or MDX file is active. Commands are still available from the Command Palette and editor context menu in any file.
+
+**UX Review or UX Rewrite does nothing** — Both commands require a text selection. If nothing is selected, the command shows a warning and exits. Select the UI text first, then run the command.
+
+**Backend returns "Backend call failure"** — This is the Azure gateway error when the API can't be reached. Check your `techwrit.baseUrl` setting and verify your API key is valid. The extension surfaces this as a readable error rather than crashing.
