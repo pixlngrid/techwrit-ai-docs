@@ -64,17 +64,29 @@ Three things do **not** travel with the team — each member owns their own:
 
 ## How locking works
 
-Admins edit shared standards once in **Team settings** → **Shared Config** tab. Every member's requests automatically use the shared set from then on. Members cannot disable or override a shared rule — they can only **add personal rules on top of** the shared set.
+Shared and personal rules, terminology, and glossary entries all live in the same **Settings** dialog. Shared items are visually marked with a **Team** badge; members see them as read-only, admins see a button to unshare.
+
+Admins promote any personal item to the team's shared set with a single click (the **Share with team** icon, a small people-icon that appears next to each row on hover). Once shared, the item takes effect for every team member on their next request. Members cannot disable or override a shared rule — they can only **add personal rules on top of** the shared set.
 
 For example:
 
-- Admin adds **Use active voice** to the shared rules → applies to everyone.
+- Admin clicks **Share with team** on **Use active voice** → applies to everyone.
 - A member adds **Capitalize product names** to their personal rules → applies only to that member, layered on top of the shared set.
 - Both rules run on the member's next request.
 
+Admins can demote a shared item back to personal at any time with the **Remove from team** icon — the item disappears from other members' configs and returns to the admin's personal set.
+
 ## How a member experiences shared standards
 
-Members see shared rules, terminology, and glossary entries marked as locked in their Settings. They can view but not edit. Personal entries still appear alongside them and are fully editable.
+Members see shared rules, terminology, and glossary entries directly in their **Settings** dialog, marked with a **Team** badge and a lock icon. The toggles are disabled; edit and delete controls are hidden. Personal entries appear alongside them and are fully editable.
+
+## How shared config is stored and propagates
+
+Your shared rules, terminology, and glossary are stored once — on the team itself, not copied into each member's account. Every member reads from the same shared set, so when you change it, the change applies to everyone.
+
+- **When someone new joins the team,** they see the current shared set on their next login. No import step, no catch-up period.
+- **When an admin changes the shared set** — shares a new rule, edits a shared glossary entry, or unshares something — existing members pick up the change the next time they load the app. Active sessions keep using the previous version until the user refreshes; changes don't push mid-session.
+- **When a member leaves the team** or is removed, the shared set stops applying to them immediately. Their personal rules, prompts, API keys, and session history stay on their account.
 
 ## Shared config size limit
 
@@ -117,6 +129,32 @@ Owners can transfer ownership to an existing admin at any time. Both people keep
 **Reversing a transfer.** The new owner can transfer ownership back if it was a mistake. There's no automatic undo; it's a fresh transfer in the opposite direction.
 
 **If the owner is unreachable.** Ownership cannot be claimed unilaterally by an admin. Contact support with proof of account control.
+
+## Common questions
+
+**Can two admins edit the shared config at the same time?**
+
+Technically yes, but simultaneous edits don't merge — the last write wins. If two admins are making sweeping changes at once, one of them can overwrite the other. In practice this is rare; coordinate if you're doing a big restructuring.
+
+**What if a member's personal rule has the same name as a shared rule?**
+
+The shared version takes precedence. The member sees the shared rule in Settings with a locked toggle; their personal version is hidden until the shared rule is removed or renamed.
+
+**Can members see what's currently in the shared config?**
+
+Yes. Every member sees the full shared set in their **Settings** dialog, marked with the **Team** badge. They can't edit it, but they can read it like any other rule or glossary entry.
+
+**Can I bulk-share a set of rules at once?**
+
+Not today — you share items one at a time via the **Share with team** icon in Settings. If you've imported a style-guide preset and want the whole preset shared, you currently share each rule individually. A bulk-share action is a possible future improvement.
+
+**Is there an audit log of shared-config changes?**
+
+No. There's a version counter that increments on every edit, but there's no history of who changed what. If a change log matters for your team, file a request.
+
+**Can members propose items for sharing?**
+
+Not directly. Members' additions stay personal to them. If they want something in the shared set, they ask an admin, who adds the item to their own Settings and clicks **Share with team**.
 
 ## Cancellation and downgrades
 

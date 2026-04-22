@@ -75,6 +75,48 @@ Once a member joins, every request they make uses your team's shared:
 
 Members keep their own prompts, API keys, and session history. They can add personal rules on top of the shared set, but they can't turn off or override a shared rule.
 
+## Common questions
+
+**Why didn't my invite email arrive?**
+
+Check these in order:
+
+- **Spam/junk folder.** First emails from new senders often get filtered. Invitations come from `invites@techwrit.ai`.
+- **Typo in the address.** Open the **Pending invitations** list and verify the address — one wrong character sends the email into the void.
+- **Corporate mail server rejection.** Some workplaces silently drop email from unfamiliar senders. Ask the recipient to check with their IT team, or invite a personal address instead.
+
+If the email is genuinely lost, cancel the pending invite and send a new one — that regenerates the link and sends a fresh email.
+
+**Can I resend an invitation?**
+
+There's no dedicated resend button today. Open **Team settings** → **Invite**, click the **X** next to the pending invitation to cancel it, then enter the same email and send again. The recipient gets a fresh email with a new link.
+
+**What if I invited the wrong email address?**
+
+Cancel the pending invitation by clicking the **X** next to it in the Invite tab. That invalidates the link immediately. Then send a new invite to the correct email.
+
+**Why can't the person I invited accept the link?**
+
+The most common reason: they're signed in to TechWrit AI with a different email than the one you invited. Invitations are locked to the address you typed, so the recipient needs to sign in (or sign up) using that exact email.
+
+Other possibilities:
+
+- The invite has expired (7-day limit). Send a new one.
+- You cancelled the invite, or it was replaced by a newer one. Send a new one.
+- The recipient is already in a different team. They need to leave their current team before accepting. The error message on the link explains this when they click it.
+
+**Do invitations expire?**
+
+Yes — after **7 days**. Expired links return an error when clicked. Just send a new invite; cleaning up the old one isn't required (expired invites are filtered out of the Pending list automatically).
+
+**Can I invite someone who already uses TechWrit AI?**
+
+Yes. If they have a TechWrit AI account under the invited email, clicking the link signs them into the team immediately. If their account is under a different email, either invite that other email, or ask them to add the invited email to their Clerk account first, or sign up a fresh account with the invited email.
+
+**Can I invite someone who's already on another team?**
+
+Not directly — each user can only belong to one team at a time. If the recipient is already in a team, they have to leave that team before accepting your invite. They get a clear error explaining this when they click the link.
+
 ## Next steps
 
 For role management, removing members, transferring ownership, and other admin tasks, see [Team administration](/team/administration/).
