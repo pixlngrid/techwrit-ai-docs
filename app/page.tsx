@@ -13,6 +13,7 @@ import {
   ArrowRight,
   CheckCircle,
   XCircle,
+  Layers,
 } from 'lucide-react'
 
 const diffBefore = {
@@ -36,7 +37,7 @@ const problems = [
     icon: ShieldCheck,
     title: 'Your rules, enforced automatically',
     description:
-      'Configure style rules, terminology substitutions, and a product glossary once. Every request — across all 14 modes — enforces them from the first draft.',
+      'Configure style rules, terminology substitutions, and a product glossary once. Every request — across all 17 modes — enforces them from the first draft.',
     link: '/settings/',
   },
   {
@@ -53,11 +54,18 @@ const problems = [
       'Lock shared rules, terminology, and glossary across your team. New writers get your standards the moment they join — no onboarding guesswork.',
     link: '/pricing/',
   },
+  {
+    icon: Layers,
+    title: 'Framework-ready output',
+    description:
+      'Pick Trellis, Docusaurus, or Notion and the AI emits MDX with the correct frontmatter, callouts, tabs, and components. Drop the result into your docs repo — no reformatting.',
+    link: '/modes/',
+  },
 ]
 
 const features = [
   {
-    title: '14 Purpose-Built Modes',
+    title: '17 Purpose-Built Modes',
     icon: Zap,
     description:
       'Write, review, rewrite, simplify, style check, code-to-docs, and more. Each mode enforces your rules and produces output tailored to the task.',
@@ -112,13 +120,14 @@ export default function Home() {
               Your style guide, enforced by AI
             </h1>
             <p className="text-xl text-[var(--muted-foreground)] mb-4 leading-relaxed max-w-2xl mx-auto">
-              TechWrit AI reviews, rewrites, and generates technical content against
-              {' '}<em>your</em> style rules, terminology, and product glossary — not
-              generic writing advice.
+              TechWrit AI is a code-aware <strong>documentation engine</strong> — not a writing
+              assistant. Paste in code, configs, or specs and get structured docs with
+              parameter tables, error codes, and examples — pre-checked against
+              {' '}<em>your</em> style rules, terminology, and glossary.
             </p>
             <p className="text-base text-[var(--muted-foreground)] mb-10 max-w-xl mx-auto leading-relaxed">
-              14 purpose-built modes. Measurable style scores. CI/CD integration.
-              Start free — no credit card required.
+              17 purpose-built modes — including dedicated UI/UX copy review and rewrite.
+              Measurable style scores. CI/CD integration. Start free — no credit card required.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <a
@@ -201,11 +210,11 @@ export default function Home() {
               Why not just use ChatGPT?
             </h2>
             <p className="text-center text-[var(--muted-foreground)] mb-10 max-w-2xl mx-auto">
-              Generic AI tools give generic advice. They don&apos;t know your terminology,
-              can&apos;t enforce your rules, and have no way to measure compliance.
-              TechWrit AI does all three.
+              Generic AI tools generate text <em>about</em> technical topics. They don&apos;t generate
+              technical <em>documentation</em>. Paste a function into ChatGPT and you get paragraphs —
+              no parameter table, no error codes, no framework-ready formatting. TechWrit AI closes that gap.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {problems.map((problem) => {
                 const Icon = problem.icon
                 return (
@@ -270,7 +279,7 @@ export default function Home() {
               Start enforcing your style guide today
             </h2>
             <p className="text-[var(--muted-foreground)] mb-8">
-              Free tier includes all 14 modes, 25 style rules, and 20 requests/month.
+              Free tier includes all 17 modes, 25 style rules, and 20 requests/month.
               No credit card required.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
