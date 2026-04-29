@@ -205,15 +205,15 @@ To set things up manually, select **Code to Docs** mode, set audience to **Devel
 
 ## Generate framework-ready documentation
 
-**Problem:** Your docs site runs on Trellis, and every page needs specific MDX conventions — frontmatter with `keywords` arrays, callouts for notes and warnings, `<Tabs>` components for multi-option content. Writers either forget these conventions or add them manually after drafting, which slows down the publish workflow.
+**Problem:** Your docs site runs on Trellis Docs, and every page needs specific MDX conventions — frontmatter with `keywords` arrays, callouts for notes and warnings, `<Tabs>` components for multi-option content. Writers either forget these conventions or add them manually after drafting, which slows down the publish workflow.
 
 **Solution:**
 
-1. Select **Trellis** from the **Framework** dropdown in the context bar before writing or generating content.
+1. Select **Trellis Docs** from the **Framework** dropdown in the context bar before writing or generating content.
 2. The AI outputs MDX with the correct frontmatter (`title`, `description`, `keywords`), callouts (`:::tip`, `:::note`, `:::warning`), and `<Tabs>`/`<TabItem>` components where appropriate.
 3. Copy or download the output and drop it directly into your docs site — no manual formatting pass needed.
 
-This works with any mode: **Write** for new pages, **Rewrite** to convert existing Markdown into Trellis-compatible MDX, or **Code to Docs** to generate framework-ready API documentation from source code.
+This works with any mode: **Write** for new pages, **Rewrite** to convert existing Markdown into Trellis Docs–compatible MDX, or **Code to Docs** to generate framework-ready API documentation from source code.
 
 **Result:** Documentation that's ready to commit to your docs repo without a formatting pass. Writers focus on content; the framework conventions are handled automatically.
 
@@ -227,7 +227,7 @@ This works with any mode: **Write** for new pages, **Rewrite** to convert existi
 2. When the inline prompt appears (detecting architecture/workflow content), select **Include diagrams**.
 3. The AI analyzes the content and generates Mermaid diagram blocks inline — flowcharts for workflows, sequence diagrams for API interactions, ER diagrams for data models.
 4. Diagrams render as interactive SVGs in the output panel. Use **PNG ↓** to download a high-resolution image for embedding in docs, Confluence, or Slack. Use **Excalidraw ↓** to download an editable `.excalidraw` file you can customize in Excalidraw (web, desktop, or VS Code extension).
-5. Download the output and the Mermaid code blocks work directly in GitHub, Docusaurus, Trellis, and any Mermaid-compatible renderer.
+5. Download the output and the Mermaid code blocks work directly in GitHub, Docusaurus, Trellis Docs, and any Mermaid-compatible renderer.
 
 **Result:** Diagrams that match your actual code, generated alongside the documentation. Export as PNG for instant use or Excalidraw for further editing. When the code changes, regenerate the docs and the diagrams update with it.
 

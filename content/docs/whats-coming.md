@@ -114,8 +114,8 @@ See the v1.10.0 release notes for details.
 
 - Connect a GitHub repo and generate an information architecture based on your codebase
 - Output a ready-to-deploy documentation site with stub pages, navigation, and suggested content
-- Powered by the Trellis docs framework — a Next.js documentation framework with smart search, design tokens, and tech-writing defaults built in
-- Extends the Trellis framework-aware output already available in the context bar — generated pages will use the same MDX conventions, frontmatter, and component patterns
+- Powered by Trellis Docs — a Next.js documentation framework with smart search, design tokens, and tech-writing defaults built in
+- Extends the Trellis Docs framework-aware output already available in the context bar — generated pages will use the same MDX conventions, frontmatter, and component patterns
 
 ### Enterprise tier
 

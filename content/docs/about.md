@@ -24,7 +24,7 @@ TechWrit AI is the opposite. It enforces *your* rules:
 | **Style rules** | Generic writing advice | Your 25+ configurable rules, checked individually, scored as a percentage |
 | **Terminology** | Suggests whatever sounds natural | Enforces your substitutions ("select" not "click," "repository" not "repo") |
 | **Product glossary** | No awareness of your product | Knows your terms, definitions, and synonyms — flags misuse in reviews |
-| **Output structure** | Generic markdown | Framework-aware output for Trellis, Docusaurus, or Notion — ready to commit |
+| **Output structure** | Generic markdown | Framework-aware output for Trellis Docs, Docusaurus, or Notion — ready to commit |
 | **Measurability** | "This reads better" | Style score: 85% of rules passed. Grade level dropped from 14 to 9 |
 | **Team consistency** | Depends on who prompts it | Shared config across every writer. Same rules, same enforcement, every time |
 | **CI/CD integration** | None | REST API and GitHub Actions for automated doc linting on every PR |

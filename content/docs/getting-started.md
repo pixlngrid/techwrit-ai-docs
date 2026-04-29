@@ -65,7 +65,7 @@ If your documentation site uses a docs-as-code framework, select it from the **F
 
 Three frameworks are supported:
 
-- **Trellis** — Next.js MDX with callouts, tabs, code highlighting, custom components, and search-indexed frontmatter.
+- **Trellis Docs** — Next.js MDX with callouts, tabs, code highlighting, custom components, and search-indexed frontmatter.
 - **Docusaurus** — React-based MDX with admonitions, tabs, versioned docs, sidebar ordering, and tag/keyword frontmatter.
 - **Notion** — Markdown optimized for Notion's block system with callout blocks, toggles, to-do lists, and database property references.
 

@@ -241,7 +241,7 @@ All modes can be combined with:
 - **Audience** — Consumer-facing, Engineers, Developers, or DevOps. The AI adapts vocabulary, detail level, and examples.
 - **Doc Type** — API reference, How-to guide, Conceptual overview, Tutorial, Release notes, Troubleshooting guide, README, Runbook, Migration guide, Architecture decision record, or FAQ. The AI adapts structure and formatting. (Technical Writing only.)
 - **Reading Level** — General (Grade 6-8), Standard (Grade 8-10), or Advanced (Grade 10-12). Controls the target Flesch-Kincaid grade level for all output. Defaults to Standard.
-- **Framework** — Trellis, Docusaurus, or Notion. The AI outputs framework-specific frontmatter, callouts, and components. (Technical Writing only.)
+- **Framework** — Trellis Docs, Docusaurus, or Notion. The AI outputs framework-specific frontmatter, callouts, and components. (Technical Writing only.)
 - **Prompt Library** — Pre-built structured prompts that fill the input area with placeholders. Some prompts auto-set the mode and doc type. See [Settings](/settings/) for details.
 
 Audience, Doc Type, Reading Level, and Framework are all optional. If unset, the AI uses Standard reading level and general technical writing best practices.
