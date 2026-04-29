@@ -58,7 +58,7 @@ const problems = [
     icon: Layers,
     title: 'Framework-ready output',
     description:
-      'Pick Trellis, Docusaurus, or Notion and the AI emits MDX with the correct frontmatter, callouts, tabs, and components. Drop the result into your docs repo — no reformatting.',
+      'Pick Trellis Docs, Docusaurus, or Notion and the AI emits MDX with the correct frontmatter, callouts, tabs, and components. Drop the result into your docs repo — no reformatting.',
     link: '/modes/',
   },
 ]
