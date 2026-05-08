@@ -246,7 +246,7 @@ Use these values for the `mode` field in Prompt Library entries:
 
 Use these values for the `docType` field in Prompt Library entries:
 
-`API reference`, `How-to guide`, `Conceptual overview`, `Tutorial`, `Release notes`, `Troubleshooting guide`, `README`, `Runbook`, `Migration guide`, `Architecture decision record`, `FAQ`
+`API reference`, `How-to guide`, `Quick start guide`, `Conceptual overview`, `Tutorial`, `Release notes`, `Troubleshooting guide`, `README`, `Runbook`, `Migration guide`, `Architecture decision record`, `FAQ`
 
 ## Valid rule categories
 
