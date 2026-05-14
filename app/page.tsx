@@ -4,7 +4,6 @@ import { Footer } from '@/components/docs/footer'
 import {
   ShieldCheck,
   GitPullRequest,
-  Users,
   Zap,
   Code,
   FileText,
@@ -34,31 +33,24 @@ const diffAfter = {
 
 const problems = [
   {
+    icon: Code,
+    title: 'Code in, structured docs out',
+    description:
+      'Paste source code, configs, or specs. The engine extracts the structure and generates the right doc type for the input — API reference, how-to, runbook, troubleshooting, or release notes — across 17 purpose-built modes.',
+    link: '/modes/',
+  },
+  {
     icon: ShieldCheck,
-    title: 'Your rules, enforced automatically',
+    title: 'Standards remembered, enforced, review-ready',
     description:
-      'Configure style rules, terminology substitutions, and a product glossary once. Every request — across all 17 modes — enforces them from the first draft.',
+      'Style rules, terminology, and a product glossary are saved with your account and applied to every request — across sessions, contributors, and tools. The first draft is already review-ready instead of an unreviewed AI dump.',
     link: '/settings/',
-  },
-  {
-    icon: GitPullRequest,
-    title: 'Docs linting in CI/CD',
-    description:
-      'Add a GitHub Action that lints every .md file on every pull request. Style violations get flagged before merge — the same way you lint code.',
-    link: '/guides/github-action/',
-  },
-  {
-    icon: Users,
-    title: 'Team-wide consistency',
-    description:
-      'Lock shared rules, terminology, and glossary across your team. New writers get your standards the moment they join — no onboarding guesswork.',
-    link: '/pricing/',
   },
   {
     icon: Layers,
     title: 'Framework-ready output',
     description:
-      'Pick Trellis Docs, Docusaurus, or Notion and the AI emits MDX with the correct frontmatter, callouts, tabs, and components. Drop the result into your docs repo — no reformatting.',
+      'Pick Trellis Docs, Docusaurus, or Notion and TechWrit AI emits MDX with the correct frontmatter, callouts, tabs, and components. Drop the result into your docs repo — no reformatting.',
     link: '/modes/',
   },
 ]
@@ -116,18 +108,21 @@ export default function Home() {
         {/* Hero */}
         <div className="relative overflow-hidden">
           <div className="max-w-3xl mx-auto text-center py-16 px-4 relative">
+            <div className="inline-block px-3 py-1 rounded-full border border-[var(--border)] text-xs font-medium text-[var(--primary)] mb-5 tracking-wide uppercase">
+              Code-aware documentation engine
+            </div>
             <h1 className="text-5xl font-bold mb-5 text-[var(--foreground)] font-display">
-              Your style guide, enforced by AI
+              Generate good documentation from source code
             </h1>
             <p className="text-xl text-[var(--muted-foreground)] mb-4 leading-relaxed max-w-2xl mx-auto">
-              TechWrit AI is a code-aware <strong>documentation engine</strong> — not a writing
-              assistant. Paste in code, configs, or specs and get structured docs with
-              parameter tables, error codes, and examples — pre-checked against
-              {' '}<em>your</em> style rules, terminology, and glossary.
+              Paste source code, configs, or specs and TechWrit AI returns API references,
+              how-to guides, runbooks, troubleshooting docs, and release notes &mdash;
+              already formatted for <em>your</em> docs framework and checked against your
+              style rules, terminology, and glossary.
             </p>
             <p className="text-base text-[var(--muted-foreground)] mb-10 max-w-xl mx-auto leading-relaxed">
-              17 purpose-built modes — including dedicated UI/UX copy review and rewrite.
-              Measurable style scores. CI/CD integration. Start free — no credit card required.
+              17 purpose-built modes. Output for Trellis Docs, Docusaurus, and Notion.
+              CI/CD integration, REST API, and VS Code extension. Start free &mdash; no credit card required.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <a
@@ -136,7 +131,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="px-7 py-3 rounded-lg bg-[var(--primary)] text-[var(--primary-foreground)] font-semibold hover:opacity-90 no-underline transition-opacity"
               >
-                Try it free
+                Generate docs
               </a>
               <Link
                 href="/about/"
@@ -207,14 +202,14 @@ export default function Home() {
         <div className="bg-[var(--muted)] border-y border-[var(--border)]">
           <div className="max-w-5xl mx-auto px-4 py-16">
             <h2 className="text-2xl font-bold font-display text-center mb-3 text-[var(--foreground)]">
-              Why not just use ChatGPT?
+              How TechWrit AI turns source into docs
             </h2>
             <p className="text-center text-[var(--muted-foreground)] mb-10 max-w-2xl mx-auto">
-              Generic AI tools generate text <em>about</em> technical topics. They don&apos;t generate
-              technical <em>documentation</em>. Paste a function into ChatGPT and you get paragraphs —
-              no parameter table, no error codes, no framework-ready formatting. TechWrit AI closes that gap.
+              Generic AI tools produce prose about your code. TechWrit AI is a documentation
+              engine: it takes code-aware inputs and returns structured technical documentation,
+              already formatted for your docs framework and checked against your standards.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {problems.map((problem) => {
                 const Icon = problem.icon
                 return (
@@ -276,11 +271,13 @@ export default function Home() {
         <div className="bg-[var(--muted)] border-t border-[var(--border)]">
           <div className="max-w-2xl mx-auto text-center py-16 px-4">
             <h2 className="text-2xl font-bold font-display mb-4 text-[var(--foreground)]">
-              Start enforcing your style guide today
+              Turn your source into review-ready docs
             </h2>
             <p className="text-[var(--muted-foreground)] mb-8">
-              Free tier includes all 17 modes, 25 style rules, and 20 requests/month.
-              No credit card required.
+              Stop shipping unreviewed AI drafts to clients, customers, and stakeholders.
+              Paste in code, configs, or specs and get a first draft that&rsquo;s already
+              structured, framework-ready, and checked against your style rules, glossary,
+              and terminology. Free tier includes all 17 modes and 20 requests/month.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <a
@@ -289,7 +286,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="px-7 py-3 rounded-lg bg-[var(--primary)] text-[var(--primary-foreground)] font-semibold hover:opacity-90 no-underline transition-opacity"
               >
-                Try it free
+                Generate docs
               </a>
               <Link
                 href="/pricing/"
