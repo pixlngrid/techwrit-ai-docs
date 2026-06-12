@@ -3,7 +3,7 @@ title: Configuration Reference
 description: Full JSON schema for the techwrit-config.json export/import file.
 keywords: [configuration, JSON, schema, rules, terminology, glossary, prompt library, custom instructions, mode instructions, export, import]
 last_update:
-  date: 02/22/2026
+  date: 06/12/2026
   author: Patricia McPhee
 ---
 
@@ -141,7 +141,7 @@ An array of glossary entry objects. These give the AI semantic understanding of 
   },
   {
     "term": "context bar",
-    "definition": "The horizontal bar above the input area containing Audience, Doc Type, Mode, and Prompt Library selectors."
+    "definition": "The horizontal bar above the input area containing the Mode, Audience, Doc Type, and Framework selectors."
   }
 ]
 ```
@@ -188,7 +188,7 @@ This field is optional. If omitted or set to `{}`, the global `customInst` appli
 
 ## templates
 
-An array of Prompt Library entry objects. Prompts pre-fill the input area with structured content containing placeholders.
+An array of Prompt Library entry objects. Prompts pre-fill the input area with structured content containing placeholders. Every prompt is user-created — TechWrit AI ships no built-in prompts, so set `builtin` to `false`.
 
 ```json
 {
@@ -208,7 +208,7 @@ An array of Prompt Library entry objects. Prompts pre-fill the input area with s
 | `content` | string | Yes | The prompt body. Use `[placeholder]` syntax for fields the user fills in. Include an `=== OUTPUT FORMAT ===` section to guide the AI's response structure. |
 | `mode` | string | No | Auto-set mode when the prompt is applied. See valid mode IDs below. |
 | `docType` | string | No | Auto-set doc type when the prompt is applied. See valid doc types below. |
-| `builtin` | boolean | Yes | Set to `false` for custom prompts. Built-in prompts (`true`) are managed by the app and cannot be overridden via import. |
+| `builtin` | boolean | Yes | Always `false`. All prompts are user-created; TechWrit AI ships no built-in prompts. |
 
 ### Prompt content tips
 

@@ -1,67 +1,101 @@
 ---
 title: Readability Metrics
-description: Real-time readability scores, before/after comparisons, and word-level diffs.
-keywords: [readability, flesch, grade level, gunning fog, diff, before after]
+description: "Real-time readability scores, before-and-after comparisons, and word-level diffs."
+keywords: [readability, flesch reading ease, flesch-kincaid, grade level, gunning fog, complexity, word count, diff, before and after, simplify, rewrite]
 last_update:
-  date: 02/22/2026
+  date: 06/12/2026
   author: Patricia McPhee
 ---
 
-TechWrit AI calculates readability scores in real time as you type. In Rewrite and Simplify modes, before/after comparisons show the concrete impact of edits.
+TechWrit AI calculates readability scores in real time as you type. The scores appear in the **Readability** panel below the content input. In Rewrite and Simplify modes, the output panel adds a before-and-after comparison so you can see the concrete impact of edits. See [The Squad](/squad/) for details on these modes.
 
-![Content Readability](/img/docs/content-readability.png)
+![Real-time readability panel showing Flesch Reading Ease, Flesch-Kincaid Grade Level, Gunning Fog Index, word count, and complexity percentage](/img/docs/content-readability.png)
+
+```mermaid
+flowchart LR
+    A[Content input] --> B[Real-time score calculation]
+    B --> C[Readability panel]
+    A --> D{Mode}
+    D -->|Rewrite or Simplify| E[Rewritten output]
+    E --> F[Before-and-after comparison]
+    E --> G[Word-level diff toggle]
+    D -->|Other modes| C
+```
 
 ## Scores
 
-### Flesch Reading Ease (0-100)
+### Flesch Reading Ease (0–100)
 
-Measures how easy text is to read. Higher is easier.
+Measures how easy text is to read — the higher the score, the easier the text.
 
 | Score | Level |
-|-------|-------|
-| 80-100 | Easy — conversational, accessible to wide audiences |
-| 60-79 | Standard — comfortable for most readers |
-| 40-59 | Difficult — may require domain expertise |
-| 0-39 | Very difficult — academic or highly specialized |
+|---|---|
+| 80–100 | Easy — conversational, accessible to wide audiences. |
+| 60–79 | Standard — comfortable for most readers. |
+| 40–59 | Difficult — might require domain expertise. |
+| 0–39 | Very difficult — academic or highly specialized. |
 
 ### Flesch-Kincaid Grade Level
 
-Estimates the US school grade required to understand the text. A score of 8 means an 8th grader should be able to understand it.
+Estimates the United States (US) school grade required to understand the text. A score of 8 means an eighth-grade reader can understand the text.
 
-**Target for technical docs:** Grade 8-12 depending on audience. Use the **Level** dropdown in the context bar to set the target: General (Grade 6-8), Standard (Grade 8-10), or Advanced (Grade 10-12).
+**Target for technical docs:** Grade 8–12 depending on audience. Set the target in **Settings → General → Reading Level**: General (Grade 6–8), Standard (Grade 8–10), or Advanced (Grade 10–12). The setting persists and applies to generated and rewritten output.
 
 ### Gunning Fog Index
 
-Estimates years of formal education needed. Similar to grade level but weights complex words (3+ syllables) more heavily.
+Estimates years of formal education needed. Similar to grade level but weights complex words (three or more syllables) more heavily.
+
+### Calculation notes
+
+TechWrit AI uses standard formulas for each metric:
+
+- Flesch Reading Ease and Flesch-Kincaid Grade Level use the original Flesch formulas based on average sentence length and average syllables per word.
+- Gunning Fog Index uses the Robert Gunning formula, weighting words of three or more syllables. [VERIFY]
 
 ## Additional metrics
 
-- **Word count** — Total words in the input
-- **Words per sentence** — Average sentence length (lower is generally clearer)
-- **Complexity %** — Percentage of words with 3+ syllables
+| Metric | What it measures | Better direction |
+|---|---|---|
+| Word count | Total words in the input. | Context-dependent. |
+| Words per sentence | Average sentence length. | Lower (clearer). |
+| Complexity % | Percentage of words with three or more syllables. | Lower (simpler vocabulary). |
 
-## Before/After comparison
+## Before-and-after comparison
 
-In **Rewrite** and **Simplify** modes, the output panel shows a side-by-side comparison:
+In **Rewrite** and **Simplify** modes, the output panel shows a side-by-side comparison of these metrics:
 
-- Flesch Ease (higher is better)
-- Grade level (lower is better)
-- Words per sentence (lower is better)
-- Complexity % (lower is better)
-- Total word count
+| Metric | Better direction |
+|---|---|
+| Flesch Reading Ease | Higher. |
+| Flesch-Kincaid Grade Level | Lower. |
+| Words per sentence | Lower. |
+| Complexity % | Lower. |
+| Total word count | Context-dependent. |
 
-Improvements are highlighted in green; regressions in orange.
+TechWrit AI highlights improvements in green and regressions in orange. Any change in the better direction appears in green; any change in the worse direction appears in orange. Unchanged metrics keep default text. [VERIFY: confirm threshold]
 
-![Rewrite Analysis](/img/docs/rewrite-analysis.png)
+![Rewrite output panel showing before-and-after metrics for Flesch Reading Ease, grade level, words per sentence, complexity percentage, and word count, with green improvements and orange regressions](/img/docs/rewrite-analysis.png)
 
 ## Word-level diff
 
-Toggle the diff view to see exactly what changed:
+Select the **Diff** toggle in the output panel to see exactly what changed:
 
-- **Red strikethrough** — removed words
-- **Green highlight** — added words
-- **Normal text** — unchanged
+- **Red strikethrough** — Removed words.
+- **Green highlight** — Added words.
+- **Normal text** — Unchanged words.
 
-A summary shows the count of removed and added words.
+The summary line displays the total count of removed and added words.
 
-![Show Diff](/img/docs/show-diff.png)
+![Word-level diff view showing red strikethrough for removed words, green highlight for added words, and a summary count](/img/docs/show-diff.png)
+
+## Recommended targets
+
+Use these targets as a starting point for most technical documentation: [VERIFY: confirm against product defaults]
+
+| Audience | Flesch Reading Ease | Grade Level | Complexity % |
+|---|---|---|---|
+| Consumer-facing | 60+ | Grade 6–8 | Under 15% |
+| Developers and engineers | 40+ | Grade 8–10 | Under 25% |
+| Specialists and researchers | 30+ | Grade 10–12 | Under 35% |
+
+These targets match the **General**, **Standard**, and **Advanced** options in **Settings → General → Reading Level**.

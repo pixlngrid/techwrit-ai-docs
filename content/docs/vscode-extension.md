@@ -3,7 +3,7 @@ title: VS Code Extension
 description: Review, rewrite, and simplify documentation and UX copy against your style rules directly in VS Code.
 keywords: [VS Code, extension, review, rewrite, simplify, style check, diagnostics, quick fix, UX writing, microcopy, UI strings]
 last_update:
-  date: 04/22/2026
+  date: 06/12/2026
   author: Patricia McPhee
 ---
 
@@ -29,6 +29,7 @@ Your API key is stored securely in VS Code's secret storage, not in settings.jso
 | Command | Shortcut | Description |
 | ------- | -------- | ----------- |
 | TechWrit AI: Review Document | `Ctrl+Shift+F6` | Review the full document for style issues |
+| TechWrit AI: Review (Suggestions Panel) | | Review with an inline accept/reject panel (a stacked diff per suggestion) |
 | TechWrit AI: Style Check | `Ctrl+Shift+F7` | Audit every active rule with a style score |
 | TechWrit AI: Rewrite Document | `Ctrl+Shift+F8` | Rewrite to comply with your style rules |
 | TechWrit AI: Simplify Document | `Ctrl+Shift+F9` | Simplify for readability |
@@ -45,6 +46,16 @@ Documentation commands (Review, Style Check, Rewrite, Simplify) apply to **Markd
 ### Review
 
 Sends your document to the TechWrit AI API and returns severity-ranked issues (Critical, Important, Minor) as native VS Code diagnostics. Issues appear as squiggly underlines in the editor. Hover an issue to see the explanation, then select the lightbulb icon to apply the suggested correction as a quick-fix.
+
+### Review (Suggestions Panel)
+
+An interactive alternative to **Review Document**. Opens a panel beside your editor where each finding is shown as a stacked diff — the original text in red, the suggested replacement in green — with **Accept** and **Reject** buttons on every suggestion. A header shows Applied, Unapplied, and Not-helpful counts, plus an **Apply all** button.
+
+Select **Accept** to apply that edit directly to your document, or **Reject** to dismiss it. Because the document sits next to the panel, you can work through suggestions one at a time and watch each change land — without leaving the editor. Applied suggestions can be reverted, and rejected ones restored.
+
+Structural findings that have no single span to replace — for example, "add a Prerequisites section" — are listed as **Notes** at the bottom of the panel.
+
+Use the Suggestions Panel when you want to review and apply changes interactively; use **Review Document** when you prefer inline squiggles and lightbulb quick-fixes.
 
 ### Style Check
 
