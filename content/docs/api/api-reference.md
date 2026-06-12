@@ -111,7 +111,7 @@ When `rules`, `termSubs`, or `glossary` are omitted, the API falls back to your 
 
 ### Suggestions output
 
-For the `review`, `style-check`, and `ux-review` modes, set `"format": "suggestions"` to receive structured findings instead of prose. Each suggestion maps to an exact span of the input, which makes it straightforward to apply edits programmatically — this is what the [VS Code extension](/docs/vscode-extension)'s Suggestions Panel uses.
+For the `review`, `style-check`, and `ux-review` modes, set `"format": "suggestions"` to receive structured findings instead of prose. Each suggestion maps to an exact span of the input, which makes it straightforward to apply edits programmatically — this is what the [VS Code extension](/vscode-extension/)'s Suggestions Panel uses.
 
 Request:
 

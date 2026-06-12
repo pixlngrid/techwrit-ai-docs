@@ -49,7 +49,7 @@ Add this to your CI pipeline (GitHub Actions, Azure DevOps, GitLab CI) to flag s
 
 **Solution:**
 
-1. Install the [VS Code extension](/docs/vscode-extension) and set your API key.
+1. Install the [VS Code extension](/vscode-extension/) and set your API key.
 2. Open any Markdown file and run **TechWrit AI: Review Document** (`Ctrl+Shift+F6`). Issues appear as native VS Code diagnostics — squiggly underlines with severity ranks.
 3. Hover an issue to see the explanation, then select the lightbulb icon to apply the suggested fix as a quick-fix action.
 4. For larger changes, run **Rewrite Document** (`Ctrl+Shift+F8`) or **Simplify Document** (`Ctrl+Shift+F9`) to update the file in place — undo with `Ctrl+Z` if needed.
