@@ -92,6 +92,12 @@ See the v1.10.0 release notes for details.
 - AsciiDoc, reStructuredText, and HTML output options for documentation modes
 - Same format selector pattern used for OpenAPI YAML in Code to Docs
 
+### MCP server
+
+- A Model Context Protocol server that exposes all 17 modes as native tools for any MCP client — Claude Desktop, Cursor, and Claude Code
+- Review, rewrite, simplify, or generate docs from your editor's chat, using your account's saved style rules, terminology, and glossary
+- Uses your existing API key and monthly quota — no separate setup
+
 ### Browser extension
 
 - Run Review or Style Check on content in Confluence, Notion, or Google Docs without copy-pasting
