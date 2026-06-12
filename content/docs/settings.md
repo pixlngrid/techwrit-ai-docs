@@ -23,7 +23,7 @@ Open the Settings dialog from the user menu at the bottom of the sidebar. The di
 
 ### Default rules
 
-TechWrit AI ships with 26 default style rules covering common technical writing standards:
+TechWrit AI ships with 27 default style rules covering common technical writing standards:
 
 | Rule | Description |
 |---|---|
@@ -51,6 +51,7 @@ TechWrit AI ships with 26 default style rules covering common technical writing 
 | Short paragraphs | Keep paragraphs between 50–150 words. |
 | Short sentences | Keep sentences under 20 words. |
 | Procedures as numbered lists | Convert sequential steps from prose to numbered lists. |
+| End steps with a period | End each numbered step with a period; steps are imperative sentences. |
 | No redundant headings above steps | Don't add a heading that repeats the numbered step below it. |
 | Screenshots need text instructions | Always pair screenshots with written instructions. |
 
@@ -71,7 +72,7 @@ TechWrit AI auto-detects the active style guide from your current rule set. If y
 ```mermaid
 flowchart TD
     A[Style Rules tab] --> B[Active rule set]
-    C[Built-in defaults<br/>26 rules] --> B
+    C[Built-in defaults<br/>27 rules] --> B
     D[Style guide template<br/>Microsoft, Google, Apple,<br/>Plain Language, AP Stylebook] -->|Replace or Merge| B
     E[Custom rules<br/>Pro tier] --> B
     F[Team-enforced rules<br/>locked] --> B
