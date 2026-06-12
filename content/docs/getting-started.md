@@ -51,7 +51,7 @@ The response uses TechWrit AI's defaults. To enforce your team's specific conven
 
 Configuring your standards is what makes TechWrit AI enforce your team's conventions rather than generic best practices. Open **Settings** from the user menu in the sidebar (about five minutes):
 
-1. **Review the 26 default style rules.** These rules cover active voice, sentence length, heading case, jargon, and more. Turn off any that don't match your team's conventions.
+1. **Review the 27 default style rules.** These rules cover active voice, sentence length, heading case, jargon, and more. Turn off any that don't match your team's conventions.
 2. **Add terminology substitutions.** These are the word-choice rules your team enforces: "select" not "click," "repository" not "repo." The AI enforces these in every mode, every request.
 3. **Add product glossary terms.** Include definitions and synonyms. When you define "webhook" with a synonym "callback URL," the AI uses the correct definition when writing and flags misuse in reviews.
 4. **Set custom instructions** for rules that don't fit the other categories: "Always use Oxford commas," "Target a 9th-grade reading level."
