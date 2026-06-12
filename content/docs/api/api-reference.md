@@ -3,7 +3,7 @@ title: API Reference
 description: REST API endpoint, authentication, rate limits, request/response format, and code examples.
 keywords: [API, REST, endpoint, authentication, rate limits, cURL, Node.js, Python]
 last_update:
-  date: 02/22/2026
+  date: 06/12/2026
   author: Patricia McPhee
 ---
 
@@ -77,6 +77,7 @@ Analyze or generate technical documentation.
 | `termSubs` | array | No | Terminology substitutions. Each: `{ preferred, avoid[] }`. If omitted, uses your saved config. |
 | `glossary` | array | No | Glossary entries. Each: `{ term, definition, synonyms[] }`. If omitted, uses your saved config. |
 | `customInstructions` | string | No | Additional freeform instructions appended to the prompt |
+| `format` | string | No | Set to `"suggestions"` (with a `review`, `style-check`, or `ux-review` mode) to receive structured, machine-applicable suggestions instead of prose. See [Suggestions output](#suggestions-output). |
 
 When `rules`, `termSubs`, or `glossary` are omitted, the API falls back to your saved configuration from the web UI.
 
@@ -107,6 +108,43 @@ When `rules`, `termSubs`, or `glossary` are omitted, the API falls back to your 
 | `quota.limit` | Monthly limit (`null` for unlimited tiers) |
 | `quota.used` | Requests used this month |
 | `quota.remaining` | Requests remaining (`null` for unlimited) |
+
+### Suggestions output
+
+For the `review`, `style-check`, and `ux-review` modes, set `"format": "suggestions"` to receive structured findings instead of prose. Each suggestion maps to an exact span of the input, which makes it straightforward to apply edits programmatically — this is what the [VS Code extension](/docs/vscode-extension)'s Suggestions Panel uses.
+
+Request:
+
+```json
+{ "mode": "review", "input": "Please utilize the API.", "format": "suggestions" }
+```
+
+Success response (200):
+
+```json
+{
+  "suggestions": [
+    {
+      "severity": "important",
+      "original": "Please utilize the API.",
+      "replacement": "Use the API.",
+      "reason": "Avoid \"please\" and prefer \"use\" over \"utilize\"."
+    }
+  ],
+  "mode": "review",
+  "usage": { "inputTokens": 1234, "outputTokens": 567 },
+  "quota": { "limit": null, "used": 6, "remaining": null }
+}
+```
+
+| Field | Description |
+|-------|-------------|
+| `suggestions[].severity` | One of `critical`, `important`, `minor`, `structure`, or `metadata` |
+| `suggestions[].original` | The exact verbatim text to replace, copied character-for-character from the input. Empty (`""`) for structural notes that have no single span — for example, "add a Prerequisites section". |
+| `suggestions[].replacement` | The suggested replacement text. Empty for structural notes. |
+| `suggestions[].reason` | A one-sentence explanation of the issue. |
+
+To apply a suggestion, replace `original` with `replacement` in your document. Suggestions with an empty `original` are advisory notes, not direct edits. If the model returns unparseable output, the response includes `"parseError": true` alongside the raw `content`.
 
 ### Error responses
 
