@@ -2,6 +2,9 @@ import type { MetadataRoute } from 'next'
 import { siteConfig } from '@/config/site'
 import { getAllDocsMeta, getAllReleaseNotes, getAllBlogPosts } from '@/lib/content'
 
+// Required for `output: export` (static HTML export) — metadata routes must be static.
+export const dynamic = 'force-static'
+
 const BASE_URL = siteConfig.url.replace(/\/$/, '')
 
 function abs(pathname: string): string {
