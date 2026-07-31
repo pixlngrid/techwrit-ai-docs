@@ -67,6 +67,35 @@ Add the same `mcpServers` block to `.cursor/mcp.json` in your project, or to you
 }
 ```
 
+### VS Code
+
+VS Code supports MCP servers natively through GitHub Copilot's agent mode (a Copilot subscription is required). Run **MCP: Add Server** from the Command Palette and follow the prompts, or create a `.vscode/mcp.json` file in your workspace. Note that VS Code uses `servers` as the top-level key — not `mcpServers` — and can prompt for your key instead of storing it:
+
+```json
+{
+  "servers": {
+    "techwrit": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@techwrit-ai/mcp"],
+      "env": { "TWAI_API_KEY": "${input:twai-key}" }
+    }
+  },
+  "inputs": [
+    {
+      "id": "twai-key",
+      "type": "promptString",
+      "description": "TechWrit AI API key",
+      "password": true
+    }
+  ]
+}
+```
+
+The `inputs` block prompts for your key the first time the server starts, so nothing sensitive is saved in the file. For a setup shared across all your workspaces, run **MCP: Open User Configuration** and add the same `servers` block there. Then open Copilot Chat in Agent mode to use the modes.
+
+If you use the Claude Code extension in VS Code rather than Copilot, follow the Claude Code steps above instead.
+
 ## Tools
 
 Each mode is a separate tool named `techwrit_<mode>`:
