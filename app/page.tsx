@@ -13,6 +13,7 @@ import {
   CheckCircle,
   XCircle,
   Layers,
+  Terminal,
 } from 'lucide-react'
 
 const diffBefore = {
@@ -264,6 +265,33 @@ export default function Home() {
                 </Link>
               )
             })}
+          </div>
+        </div>
+
+        {/* MCP Server */}
+        <div className="max-w-5xl mx-auto px-4 pb-16">
+          <div className="rounded-2xl border border-[var(--primary)]/30 bg-[var(--primary)]/[0.04] p-8 md:p-12 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--primary)]/30 text-xs font-medium text-[var(--primary)] mb-5 tracking-wide uppercase">
+              <Terminal size={14} />
+              MCP Server
+            </div>
+            <h2 className="text-2xl font-bold font-display mb-3 text-[var(--foreground)]">
+              Use TechWrit AI in Claude, Cursor, and VS Code
+            </h2>
+            <p className="text-[var(--muted-foreground)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              The MCP server puts all 17 modes &mdash; review, rewrite, simplify, generate docs
+              from code, and more &mdash; inside your editor as tools and slash commands. Works in
+              Claude Desktop, Claude Code, Cursor, VS Code, and the GitHub Copilot CLI, using your
+              account&rsquo;s saved style rules, terminology, and glossary. Runs via{' '}
+              <code className="px-1 py-0.5 rounded bg-[var(--muted)] text-[var(--foreground)] text-sm">npx</code>{' '}
+              &mdash; nothing to install. Requires a Pro or Team API key.
+            </p>
+            <Link
+              href="/mcp/"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-lg bg-[var(--primary)] text-[var(--primary-foreground)] font-semibold hover:opacity-90 no-underline transition-opacity"
+            >
+              Set up the MCP server <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
 
