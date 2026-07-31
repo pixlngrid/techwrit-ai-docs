@@ -170,21 +170,51 @@ Slash commands and tools are the same 17 modes exposed two ways:
 
 Restart your MCP client after installing or updating the server so new slash commands appear.
 
-## Usage
+## How to use it
 
-Once the server is registered, work in plain language. Open or paste the file you want to work on, then ask your assistant to run a mode. For example:
+Once the server is registered, you work in plain language — describe what you want and your assistant runs the right mode. The key thing to understand: **the server never reads your files itself. Your AI client does.** Your assistant reads the code or document you're working on, passes it to a TechWrit AI mode, which applies your account's saved style rules, terminology, and glossary, and hands back the result for you to save. You stay in your editor the whole time.
 
-> Review this file against my style rules and list the issues by severity.
+### Two ways to run a mode
 
-The assistant calls `techwrit_review` with your document as `input`, and TechWrit AI checks it against your account's saved style rules, terminology, and glossary. Other examples:
+- **Ask in plain language.** Your assistant picks the matching tool automatically. *"Review this file against my style rules"* runs `review`; *"turn this handler into API docs"* runs `code-to-docs`.
+- **Slash commands.** Type `/` and choose a mode — for example `/techwrit_review` — and your client prompts you for the input. Use these to trigger a specific mode on purpose.
 
-> Rewrite the selected paragraph to match my style guide.
+Both cover the same 17 modes; pick whichever fits your flow.
 
-> Turn this Go handler into API reference docs for developers.
+### Working in a codebase
 
-> Simplify the Overview section so a non-specialist can follow it.
+Because your assistant already has access to your repository, you can point it straight at source files — it reads the code, runs the mode, and writes the output wherever you ask:
 
-To get structured, machine-applicable findings you can accept one by one, ask for suggestions:
+> Generate API reference docs from `src/api/users.ts` and save them to `docs/api/users.md`.
+
+A common loop is generate → review → fix, without leaving your editor:
+
+> Draft docs for this new endpoint, review them against our style guide, then apply the fixes it flags.
+
+### For developers
+
+| Ask your assistant | Mode | What you get |
+| --- | --- | --- |
+| "Generate API reference docs from this file" | `code-to-docs` | A structured reference — parameter tables, types, request/response examples, error codes |
+| "Review this README against my style rules" | `review` | Findings ranked Critical / Important / Minor, each with a concrete fix |
+| "Explain what this middleware does, for the docs" | `explain` | A plain-language explanation ready for a concept page |
+| "This runbook is too dense — simplify it" | `simplify` | A tighter, more scannable version at the same technical accuracy |
+| "Rewrite CONTRIBUTING.md to match our terminology" | `rewrite` | The document corrected to your rules and glossary |
+
+### For product managers and non-writers
+
+| Ask your assistant | Mode | What you get |
+| --- | --- | --- |
+| "Turn these rough feature notes into a how-to guide" | `generate` / `expand` | A structured guide with prerequisites and numbered steps |
+| "Draft an end-user guide from this feature's code" | `user-guide` | End-user concepts and how-tos, written from the actual product code |
+| "Review the button labels and error messages in this component" | `ux-review` | Microcopy feedback — clarity, tone, consistency, accessibility |
+| "Rewrite these release notes in our voice" | `rewrite` / `ux-rewrite` | Polished, on-brand copy |
+| "Summarize this spec into three bullets for a stakeholder update" | `summarize` | A tight summary you can paste into an email |
+| "Translate the getting-started guide to Spanish" | `translate` | A faithful translation that leaves code and commands intact |
+
+### Machine-applicable suggestions
+
+The review-family modes (`review`, `style-check`, `ux-review`) can return structured findings you accept one at a time instead of prose — ideal for editors that apply edits inline:
 
 > Review this README against my rules and return the findings as suggestions.
 
