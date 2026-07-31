@@ -77,6 +77,7 @@ Use the **Reset** button in the context bar to clear selections and start fresh.
 ## Next steps
 
 - [Modes](/modes/) — The 17 purpose-built modes and when to use each one.
+- [Docs from Code](/docs-from-code/) — Generate API references, developer guides, and user guides from your source code.
 - [Best Practices](/best-practices/) — Tips for chaining modes, using diffs, and getting better results.
 - [Use Cases](/use-cases/) — Real scenarios: continuous integration and continuous delivery (CI/CD) linting, team onboarding, API doc generation, and more.
 - [Pricing](/pricing/) — Free tier, Pro, and Team plans.

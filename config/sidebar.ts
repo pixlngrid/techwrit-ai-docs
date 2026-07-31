@@ -22,6 +22,7 @@ export const mainSidebar: SidebarItem[] = [
     collapsed: false,
     items: [
       { type: 'doc', id: 'modes', label: 'Modes' },
+      { type: 'doc', id: 'docs-from-code', label: 'Docs from Code' },
       { type: 'doc', id: 'best-practices', label: 'Best Practices' },
       { type: 'doc', id: 'readability', label: 'Readability' },
       { type: 'doc', id: 'use-cases', label: 'Use Cases' },
