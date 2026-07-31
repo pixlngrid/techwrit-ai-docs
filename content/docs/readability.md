@@ -7,7 +7,7 @@ last_update:
   author: Patricia McPhee
 ---
 
-TechWrit AI calculates readability scores in real time as you type. The scores appear in the **Readability** panel below the content input. In Rewrite and Simplify modes, the output panel adds a before-and-after comparison so you can see the concrete impact of edits. See [The Squad](/squad/) for details on these modes.
+TechWrit AI calculates readability scores in real time as you type. The scores appear in the **Readability** panel below the content input. In Rewrite and Simplify modes, the output panel adds a before-and-after comparison so you can see the concrete impact of edits. See [Modes](/modes/) for details on these modes.
 
 ![Real-time readability panel showing Flesch Reading Ease, Flesch-Kincaid Grade Level, Gunning Fog Index, word count, and complexity percentage](/img/docs/content-readability.png)
 

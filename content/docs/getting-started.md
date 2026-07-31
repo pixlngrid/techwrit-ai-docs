@@ -76,7 +76,7 @@ Use the **Reset** button in the context bar to clear selections and start fresh.
 
 ## Next steps
 
-- [The Squad](/squad/) — Meet the six specialists who own the 17 modes, and learn when to call each one.
+- [Modes](/modes/) — The 17 purpose-built modes and when to use each one.
 - [Best Practices](/best-practices/) — Tips for chaining modes, using diffs, and getting better results.
 - [Use Cases](/use-cases/) — Real scenarios: continuous integration and continuous delivery (CI/CD) linting, team onboarding, API doc generation, and more.
 - [Pricing](/pricing/) — Free tier, Pro, and Team plans.
