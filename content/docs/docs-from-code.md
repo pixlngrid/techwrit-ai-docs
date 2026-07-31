@@ -112,5 +112,3 @@ Through the MCP server you can run the whole loop in one request:
 - [Modes](/modes/) — The 17 purpose-built modes, including Code to Docs and User Guide, and when to use each.
 - [MCP Server](/mcp/) — Run any mode from your AI client, per-client setup, and more code examples.
 - [Use Cases](/use-cases/) — End-to-end scenarios, including generating an API reference and creating user guides from product code.
-</content>
-</invoke>
