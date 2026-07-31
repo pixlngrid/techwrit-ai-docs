@@ -108,6 +108,19 @@ The three review-family tools — `techwrit_review`, `techwrit_style_check`, and
 
 Your assistant fills these in for you based on your request, so you rarely set them by hand. Naming the audience or document type in your prompt ("review this as an API reference for developers") is usually enough for the assistant to pass the right values.
 
+## Slash commands
+
+The server exposes each mode as a **prompt** as well as a tool, and MCP clients surface prompts as **slash commands** — so you can trigger a mode on purpose instead of describing it.
+
+In Claude Desktop, Cursor, or Claude Code, type `/` and choose the mode — for example `techwrit_review`. The client asks for the `input` (the document, source code, or prompt to process), then runs that mode against your saved style rules.
+
+Slash commands and tools are the same 17 modes exposed two ways:
+
+- **Slash commands** — a quick, discoverable trigger you invoke on purpose.
+- **Tools** — called automatically by your assistant when your request needs one.
+
+Restart your MCP client after installing or updating the server so new slash commands appear.
+
 ## Usage
 
 Once the server is registered, work in plain language. Open or paste the file you want to work on, then ask your assistant to run a mode. For example:
