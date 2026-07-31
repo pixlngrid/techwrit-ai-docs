@@ -96,6 +96,26 @@ The `inputs` block prompts for your key the first time the server starts, so not
 
 If you use the Claude Code extension in VS Code rather than Copilot, follow the Claude Code steps above instead.
 
+### GitHub Copilot CLI
+
+In the [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers), run `/mcp add` and follow the wizard, or edit `~/.copilot/mcp-config.json` directly. The Copilot CLI uses the `mcpServers` key, but with `type: "local"` and a `tools` array, and it reads your key from an environment variable:
+
+```json
+{
+  "mcpServers": {
+    "techwrit": {
+      "type": "local",
+      "command": "npx",
+      "args": ["-y", "@techwrit-ai/mcp"],
+      "tools": ["*"],
+      "env": { "TWAI_API_KEY": "${TWAI_API_KEY}" }
+    }
+  }
+}
+```
+
+Set `TWAI_API_KEY` in your shell first — for example, `export TWAI_API_KEY=twai_XXXX` — so the `${TWAI_API_KEY}` reference resolves. `"tools": ["*"]` enables all 17 modes.
+
 ## Tools
 
 Each mode is a separate tool named `techwrit_<mode>`:
